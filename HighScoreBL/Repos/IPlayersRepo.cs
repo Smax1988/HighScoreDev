@@ -11,13 +11,12 @@ namespace HighScoreBL.Repos
     public interface IPlayersRepo
     {
         Player? GetPlayer(int playerId);
-        List<PlayerPerGame> GetPlayers();
+        List<PlayerPerGame> GetAllPlayers();
 
         // Add
         // Remove
         // Update
-        // Get
-        // GetAll
+
         // List<PlayerPerGame> GetPlayers(int GameId);
 
     }
