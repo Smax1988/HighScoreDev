@@ -1,0 +1,290 @@
+[
+  {
+    "players": [
+      {
+        "PlayerId": 1,
+        "Nickname": "Player1",
+        "Email": "player1@example.com",
+        "Birthday": "2000-01-01T00:00:00",
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes1"
+      },
+      {
+        "PlayerId": 2,
+        "Nickname": "Player2",
+        "Email": "player2@example.com",
+        "Birthday": "1995-02-02T00:00:00",
+        "FirstName": "Jane",
+        "LastName": "Doe",
+        "Entry": "2023-10-16T00:00:00",
+        "Exit": "2023-10-16T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes2"
+      },
+      {
+        "PlayerId": 3,
+        "Nickname": "Player3",
+        "Email": "player3@example.com",
+        "Birthday": "1992-03-03T00:00:00",
+        "FirstName": "Michael",
+        "LastName": "Smith",
+        "Entry": "2023-10-15T00:00:00",
+        "Exit": "2023-10-15T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes3"
+      },
+      {
+        "PlayerId": 4,
+        "Nickname": "Player4",
+        "Email": "player4@example.com",
+        "Birthday": "1988-04-04T00:00:00",
+        "FirstName": "Emily",
+        "LastName": "Johnson",
+        "Entry": "2023-10-14T00:00:00",
+        "Exit": "2023-10-14T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes4"
+      },
+      {
+        "PlayerId": 5,
+        "Nickname": "Player5",
+        "Email": "player5@example.com",
+        "Birthday": "1990-05-05T00:00:00",
+        "FirstName": "William",
+        "LastName": "Williams",
+        "Entry": "2023-10-13T00:00:00",
+        "Exit": "2023-10-13T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes5"
+      },
+      {
+        "PlayerId": 6,
+        "Nickname": "Player6",
+        "Email": "player6@example.com",
+        "Birthday": "1985-06-06T00:00:00",
+        "FirstName": "Olivia",
+        "LastName": "Jones",
+        "Entry": "2023-10-12T00:00:00",
+        "Exit": "2023-10-12T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes6"
+      },
+      {
+        "PlayerId": 7,
+        "Nickname": "Player7",
+        "Email": "player7@example.com",
+        "Birthday": "1982-07-07T00:00:00",
+        "FirstName": "James",
+        "LastName": "Brown",
+        "Entry": "2023-10-11T00:00:00",
+        "Exit": "2023-10-11T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes7"
+      },
+      {
+        "PlayerId": 8,
+        "Nickname": "Player8",
+        "Email": "player8@example.com",
+        "Birthday": "1978-08-08T00:00:00",
+        "FirstName": "Sophia",
+        "LastName": "Davis",
+        "Entry": "2023-10-10T00:00:00",
+        "Exit": "2023-10-10T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes8"
+      },
+      {
+        "PlayerId": 9,
+        "Nickname": "Player9",
+        "Email": "player9@example.com",
+        "Birthday": "1983-09-09T00:00:00",
+        "FirstName": "Benjamin",
+        "LastName": "Miller",
+        "Entry": "2023-10-09T00:00:00",
+        "Exit": "2023-10-09T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes9"
+      },
+      {
+        "PlayerId": 10,
+        "Nickname": "Player10",
+        "Email": "player10@example.com",
+        "Birthday": "1975-10-10T00:00:00",
+        "FirstName": "Mia",
+        "LastName": "Wilson",
+        "Entry": "2023-10-08T00:00:00",
+        "Exit": "2023-10-08T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes10"
+      }
+    ],
+    "highscores": [
+      {
+        "GameId": 1,
+        "PlayerId": 101,
+        "Score": 100,
+        "ScoreDate": "2023-10-17T00:00:00"
+      },
+      {
+        "GameId": 2,
+        "PlayerId": 102,
+        "Score": 95,
+        "ScoreDate": "2023-10-16T00:00:00"
+      },
+      {
+        "GameId": 1,
+        "PlayerId": 103,
+        "Score": 110,
+        "ScoreDate": "2023-10-15T00:00:00"
+      },
+      {
+        "GameId": 3,
+        "PlayerId": 104,
+        "Score": 80,
+        "ScoreDate": "2023-10-14T00:00:00"
+      },
+      {
+        "GameId": 2,
+        "PlayerId": 105,
+        "Score": 120,
+        "ScoreDate": "2023-10-13T00:00:00"
+      },
+      {
+        "GameId": 1,
+        "PlayerId": 106,
+        "Score": 90,
+        "ScoreDate": "2023-10-12T00:00:00"
+      },
+      {
+        "GameId": 4,
+        "PlayerId": 107,
+        "Score": 150,
+        "ScoreDate": "2023-10-11T00:00:00"
+      },
+      {
+        "GameId": 3,
+        "PlayerId": 108,
+        "Score": 85,
+        "ScoreDate": "2023-10-10T00:00:00"
+      },
+      {
+        "GameId": 2,
+        "PlayerId": 109,
+        "Score": 115,
+        "ScoreDate": "2023-10-09T00:00:00"
+      },
+      {
+        "GameId": 4,
+        "PlayerId": 110,
+        "Score": 130,
+        "ScoreDate": "2023-10-08T00:00:00"
+      }
+    ],
+    "games": [
+      {
+        "GameId": 1,
+        "Title": "Title1",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher1",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes1"
+      },
+      {
+        "GameId": 2,
+        "Title": "Title2",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher2",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes2"
+      },
+      {
+        "GameId": 3,
+        "Title": "Title3",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher3",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes3"
+      },
+      {
+        "GameId": 4,
+        "Title": "Title4",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher4",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes4"
+      },
+      {
+        "GameId": 5,
+        "Title": "Title5",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher5",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes5"
+      },
+      {
+        "GameId": 6,
+        "Title": "Title6",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher6",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes6"
+      },
+      {
+        "GameId": 7,
+        "Title": "Title7",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher7",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes7"
+      },
+      {
+        "GameId": 8,
+        "Title": "Title8",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher8",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes8"
+      },
+      {
+        "GameId": 9,
+        "Title": "Title9",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher9",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes9"
+      },
+      {
+        "GameId": 10,
+        "Title": "Title10",
+        "Published": "2023-10-17T00:00:00",
+        "Publisher": "Publisher10",
+        "Entry": "2023-10-17T00:00:00",
+        "Exit": "2023-10-17T00:00:00",
+        "IsActive": true,
+        "Notes": "Notes10"
+      }
+    ]
+  }
+]
