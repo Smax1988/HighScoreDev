@@ -12,14 +12,44 @@ namespace HighScoreDALTests;
 internal class HighScoreDataTests
 {
     [Test]
-    public void LoadGamesTest()
+    public void LoadGamesFromJson_Test()
     {
         HighScoreData highscoreData = new HighScoreData();
+        highscoreData.FileType = FileType.json;
 
         Assert.Multiple(() =>
         {
-            Assert.That(highscoreData.Games, Is.Not.Null);
+            Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
+            Assert.That(highscoreData.Games.Count, Is.EqualTo(10));
+        });
+    }
+
+    [Test]
+    public void LoadGamesFromXml_Test()
+    {
+        HighScoreData highscoreData = new HighScoreData();
+        highscoreData.FileType = FileType.xml;
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
+            Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
+            Assert.That(highscoreData.Games.Count, Is.EqualTo(10));
+        });
+    }
+
+    [Test]
+    public void LoadGamesFromCsv_Test()
+    {
+        HighScoreData highscoreData = new HighScoreData();
+        highscoreData.FileType = FileType.csv;
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
+            Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
+            Assert.That(highscoreData.Games.Count, Is.EqualTo(10));
         });
     }
 }
