@@ -16,7 +16,7 @@ public class HighScoreData : IHighScoreData
 
     public List<Game> Games 
     { 
-        get { return _games ??= LoadGames(); }
+        get { return _games ??= Load(); }
     }
 
     public List<Player> Players 
@@ -27,6 +27,11 @@ public class HighScoreData : IHighScoreData
     public List<HighScore> HighScores 
     {
         get { return _highScores ??= LoadHighScores(); } 
+    }
+
+    private List<T> Load<T>()
+    {
+
     }
 
     public int Save()
@@ -61,7 +66,7 @@ public class HighScoreData : IHighScoreData
             case FileType.csv:
                 return LoadCSV<Game>();
             default:
-                throw new ArgumentOutOfRangeException("File type not supported.");
+                throw new NotSupportedException("File type not supported.");
         }
     }
 
@@ -76,7 +81,7 @@ public class HighScoreData : IHighScoreData
             case FileType.csv:
                 return LoadCSV<Player>();
             default:
-                throw new ArgumentOutOfRangeException("File type not supported.");
+                throw new NotSupportedException("File type not supported.");
         }
     }
 
@@ -91,23 +96,38 @@ public class HighScoreData : IHighScoreData
             case FileType.csv:
                 return LoadCSV<HighScore>();
             default:
-                throw new ArgumentOutOfRangeException("File type not supported.");
+                throw new NotSupportedException("File type not supported.");
         }
     }
 
-    private List<T>? LoadJson<T>()
+    private List<T> LoadJson<T>()
     {
-        string filePath = "D:\\Coding\\EKE\\2APEC\\INF-Birkner\\HighScoreDev\\HighScoreDAL\\HighScore\\Json\\Games.json";
-        string content = File.ReadAllText(filePath);
+        string filePath = "D:\\Coding\\EKE\\2APEC\\INF-Birkner\\HighScoreDev\\HighScoreDAL\\HighScore\\Json\\";
+        string jsonContent;
+        List<T>? result;
         
         if (typeof(T) == typeof(Game))
-            return JsonSerializer.Deserialize<List<Game>>(content) as List<T>;
+        {
+            filePath += "Games.json";
+            jsonContent = File.ReadAllText(filePath);
+            result = JsonSerializer.Deserialize<List<Game>>(jsonContent) as List<T>;
+        }
         else if (typeof(T) == typeof(Player))
-            return JsonSerializer.Deserialize<List<Player>>(content) as List<T>;
+        {
+            filePath += "Players.json";
+            jsonContent = File.ReadAllText(filePath);
+            result = JsonSerializer.Deserialize<List<Player>>(jsonContent) as List<T>;
+        }
         else if (typeof(T) == typeof(HighScore))
-            return JsonSerializer.Deserialize<List<HighScore>>(content) as List<T>;
+        {
+            filePath += "Highscore.json";
+            jsonContent = File.ReadAllText(filePath);
+            result = JsonSerializer.Deserialize<List<HighScore>>(jsonContent) as List<T>;
+        }
         else
             throw new NotSupportedException("Type not supported.");
+
+        return result!;
     }
 
     private List<T>? LoadCSV<T>()
