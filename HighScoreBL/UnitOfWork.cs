@@ -11,7 +11,7 @@ namespace HighScoreBL;
 public class UnitOfWork
 {
     private PlayersRepo? playersRepo;
-    private readonly HsDal dal = new HsDal();
+    private readonly HighScoreData dal = new HighScoreData();
 
 
     public PlayersRepo Players

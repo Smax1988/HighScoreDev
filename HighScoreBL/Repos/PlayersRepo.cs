@@ -11,9 +11,9 @@ namespace HighScoreBL.Repos
 {
     public class PlayersRepo : IPlayersRepo
     {
-        private readonly HsDal dal;
+        private readonly HighScoreData dal;
 
-        public PlayersRepo(HsDal hsdal)
+        public PlayersRepo(HighScoreData hsdal)
         {
             dal = hsdal;
         }
@@ -22,11 +22,11 @@ namespace HighScoreBL.Repos
             return dal.Players.FirstOrDefault(p => p.PlayerId == playerId);
         }
 
-        public List<PlayerPerGame> GetAllPlayers()
+        public List<PlayerPerGameViewModel> GetAllPlayers()
         {
             var players = from p in dal.Players
                           orderby p.Nickname
-                          select new PlayerPerGame
+                          select new PlayerPerGameViewModel
                           {
                               PlayerId = p.PlayerId,
                               Email = p.Email,

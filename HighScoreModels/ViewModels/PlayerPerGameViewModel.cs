@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HighScoreModels.ViewModels
 {
-    public class PlayerPerGame
+    public class PlayerPerGameViewModel
     {
         public int PlayerId { get; set; }
         public string Nickname { get; set; } = string.Empty;

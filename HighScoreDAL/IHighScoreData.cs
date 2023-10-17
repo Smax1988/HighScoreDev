@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HighScoreDAL
 {
-    public interface IHsDal
+    public interface IHighScoreData
     {
         public string FilePath { get; set; }
         public FileType FileType { get; set; }
