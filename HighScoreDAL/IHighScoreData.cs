@@ -16,7 +16,7 @@ namespace HighScoreDAL
         public List<HighScore> HighScores { get; }
 
         /// <summary>
-        /// Save all Lists to json, csv or txt file
+        /// Save all Lists to json, csv or xml file
         /// </summary>
         /// <returns>Number of insertions</returns>
         int Save();

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.Linq;
+using System.Reflection.PortableExecutable;
+using System.Data.SqlTypes;
 
 namespace HighScoreDAL;
 
@@ -22,7 +24,6 @@ public class HighScoreData : IHighScoreData
         get { return _games ??= LoadGames(); }
     }
 
-    [XmlElement("players")]
     public List<Player> Players
     {
         get { return _players ??= LoadPlayers(); }
@@ -32,7 +33,6 @@ public class HighScoreData : IHighScoreData
     {
         get { return _highScores ??= LoadHighScores(); }
     }
-
 
     public int Save()
     {
@@ -88,7 +88,6 @@ public class HighScoreData : IHighScoreData
             default:
                 throw new NotSupportedException("File type must be .json, .xml or .csv");
         }
-
     }
 
     private List<HighScore> LoadHighScores()
@@ -121,38 +120,42 @@ public class HighScoreData : IHighScoreData
 
     private List<T> LoadXml<T>()
     {
-        string data = File.ReadAllText(FilePath + "\\data.xml");
-        XDocument doc = XDocument.Parse(data);
+        var xmlString = File.ReadAllText(FilePath + "\\data.xml");
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.LoadXml(xmlString);
 
         if (typeof(T) == typeof(Game))
         {
-            var games = doc.Descendants("games").Elements("game");
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Game>));
-            using (StringReader reader = new StringReader(games.ToString()))
+            List<Game> games = new List<Game>();
+            XmlNodeList gameNodes = xmlDoc.SelectNodes("//root/games/game");
+
+            foreach (XmlNode gameNode in gameNodes)
             {
-                List<Game> gameList = (List<Game>)serializer.Deserialize(reader);
-                return gameList as List<T>;
+                ParseGamesXml(games, gameNode);
             }
+            return games as List<T> ?? new List<T>();
         }
         else if (typeof(T) == typeof(Player))
         {
-            var players = doc.Descendants("players").Elements("player");
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Player>));
-            using (StringReader reader = new StringReader(players.ToString()))
+            List<Player> players = new List<Player>();
+            XmlNodeList playerNodes = xmlDoc.SelectNodes("//root/players/player");
+
+            foreach (XmlNode playerNode in playerNodes)
             {
-                List<Player> playerList = (List<Player>)serializer.Deserialize(reader);
-                return playerList as List<T>;
+                ParsePlayersXml(players, playerNode);
             }
+            return players as List<T> ?? new List<T>();
         }
         else if (typeof(T) == typeof(HighScore))
         {
-            var highScores = doc.Descendants("highScores").Elements("highScore");
-            XmlSerializer serializer = new XmlSerializer(typeof(List<HighScore>));
-            using (StringReader reader = new StringReader(highScores.ToString()))
+            List<HighScore> highscores = new List<HighScore>();
+            XmlNodeList highscoreNodes = xmlDoc.SelectNodes("//root/highscores/highscore");
+
+            foreach (XmlNode highscoreNode in highscoreNodes)
             {
-                List<HighScore> highScoreList = (List<HighScore>)serializer.Deserialize(reader);
-                return highScoreList as List<T>;
+                ParseHighscoresXml(highscores, highscoreNode);
             }
+            return highscores as List<T> ?? new List<T>();
         }
         else
         {
@@ -160,7 +163,48 @@ public class HighScoreData : IHighScoreData
         }
     }
 
+    private static void ParseHighscoresXml(List<HighScore> highscores, XmlNode highscoreNode)
+    {
+        HighScore highscore = new HighScore();
+        highscore.GameId = Convert.ToInt32(highscoreNode.SelectSingleNode("GameId").InnerText);
+        highscore.PlayerId = Convert.ToInt32(highscoreNode.SelectSingleNode("PlayerId").InnerText);
+        highscore.Score = Convert.ToInt32(highscoreNode.SelectSingleNode("Score").InnerText);
+        highscore.ScoreDate = DateTime.Parse(highscoreNode.SelectSingleNode("ScoreDate").InnerText);
 
+        highscores.Add(highscore);
+    }
+
+    private static void ParsePlayersXml(List<Player> players, XmlNode playerNode)
+    {
+        Player player = new Player();
+        player.PlayerId = Convert.ToInt32(playerNode.SelectSingleNode("PlayerId").InnerText);
+        player.Nickname = playerNode.SelectSingleNode("Nickname").InnerText;
+        player.Email = playerNode.SelectSingleNode("Email").InnerText;
+        player.Birthday = DateTime.Parse(playerNode.SelectSingleNode("Birthday").InnerText);
+        player.FirstName = playerNode.SelectSingleNode("FirstName").InnerText;
+        player.LastName = playerNode.SelectSingleNode("LastName").InnerText;
+        player.Entry = DateTime.Parse(playerNode.SelectSingleNode("Entry").InnerText);
+        player.Exit = DateTime.Parse(playerNode.SelectSingleNode("Exit").InnerText);
+        player.IsActive = Convert.ToBoolean(playerNode.SelectSingleNode("IsActive").InnerText);
+        player.Notes = playerNode.SelectSingleNode("Notes").InnerText;
+
+        players.Add(player);
+    }
+
+    private static void ParseGamesXml(List<Game> games, XmlNode gameNode)
+    {
+        Game game = new Game();
+        game.GameId = Convert.ToInt32(gameNode.SelectSingleNode("GameId").InnerText);
+        game.Title = gameNode.SelectSingleNode("Title").InnerText;
+        game.Published = DateTime.Parse(gameNode.SelectSingleNode("Published").InnerText);
+        game.Publisher = gameNode.SelectSingleNode("Publisher").InnerText;
+        game.Entry = DateTime.Parse(gameNode.SelectSingleNode("Entry").InnerText);
+        game.Exit = DateTime.Parse(gameNode.SelectSingleNode("Exit").InnerText);
+        game.IsActive = Convert.ToBoolean(gameNode.SelectSingleNode("IsActive").InnerText);
+        game.Notes = gameNode.SelectSingleNode("Notes").InnerText;
+
+        games.Add(game);
+    }
 
     private void SaveJson()
     {
