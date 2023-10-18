@@ -1,14 +1,7 @@
 ﻿using HighScoreModels;
 using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
-using System.Xml.Linq;
-using System.Reflection.PortableExecutable;
-using System.Data.SqlTypes;
-using System.ComponentModel;
-using Newtonsoft.Json.Linq;
 
 namespace HighScoreDAL;
 
@@ -227,7 +220,6 @@ public class HighScoreData : IHighScoreData
         dto.Games = Games;
         dto.HighScores = HighScores;
         //DEBUG dto.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes = "________________", Nickname = "TEST", Email = "TEST" });
-
 
         using (FileStream fs = new FileStream(FilePath + "data.json", FileMode.Create, FileAccess.Write))
         {
