@@ -10,38 +10,38 @@ namespace HighScoreBL;
 
 public class UnitOfWork
 {
-    private readonly HighScoreData data = new HighScoreData();
-    private PlayersRepository? playersRepo;
-    private GameRepository? gameRepo;
-    private HighScoreRepository? highScoreRepo;
+    private readonly HighScoreData _data = new HighScoreData();
+    private PlayersRepository? _playersRepo;
+    private GameRepository? _gameRepo;
+    private HighScoreRepository? _highScoreRepo;
 
-    public PlayersRepository Players
+    public PlayersRepository PlayersRepo
     {
         get
         {
-            return playersRepo ??= new PlayersRepository(data);
+            return _playersRepo ??= new PlayersRepository(_data);
         }
     }
 
-    public GameRepository Games
+    public GameRepository GamesRepo
     {
         get 
         {
-            return gameRepo ??= new GameRepository(data); 
+            return _gameRepo ??= new GameRepository(_data); 
         }
     }
 
-    public HighScoreRepository HighScores
+    public HighScoreRepository HighScoresRepo
     {
         get
         {
-            return highScoreRepo ??= new HighScoreRepository(data);
+            return _highScoreRepo ??= new HighScoreRepository(_data);
         }
     }
 
-    public int Commit()
+    public async Task<int> Commit()
     {
-        return data.Save();
+        return await _data.Save();
     }
 
     public void Rollback()

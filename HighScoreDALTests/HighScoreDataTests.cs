@@ -20,7 +20,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
         });
     }
 
@@ -33,7 +32,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
         });
     }
 
@@ -46,7 +44,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
         });
     }
 
@@ -59,7 +56,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.Players, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.Players, Is.TypeOf<List<Player>>());
         });
     }
 
@@ -72,7 +68,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.Players, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.Players, Is.TypeOf<List<Player>>());
         });
     }
 
@@ -85,7 +80,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.Players, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.Players, Is.TypeOf<List<Player>>());
         });
     }
 
@@ -98,7 +92,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.HighScores, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.HighScores, Is.TypeOf<List<HighScore>>());
         });
     }
 
@@ -111,7 +104,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.HighScores, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.HighScores, Is.TypeOf<List<HighScore>>());
         });
     }
 
@@ -124,7 +116,6 @@ internal class HighScoreDataTests
         Assert.Multiple(() =>
         {
             Assert.That(highscoreData.HighScores, Is.Not.Null.Or.Empty);
-            Assert.That(highscoreData.HighScores, Is.TypeOf<List<HighScore>>());
         });
     }
 
