@@ -247,6 +247,18 @@
       <FirstName>Test_Player</FirstName>
       <LastName>Test_Player</LastName>
     </Player>
+    <Player>
+      <Entry>0001-01-01T00:00:00</Entry>
+      <Exit>0001-01-01T00:00:00</Exit>
+      <IsActive>false</IsActive>
+      <Notes>NEUEUEUEUEUEUEUEUEUE</Notes>
+      <PlayerId>100000</PlayerId>
+      <Nickname>TEST</Nickname>
+      <Email>TEST</Email>
+      <Birthday>0001-01-01T00:00:00</Birthday>
+      <FirstName>Test_Player</FirstName>
+      <LastName>Test_Player</LastName>
+    </Player>
   </Players>
   <HighScores>
     <HighScore>

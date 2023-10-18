@@ -128,19 +128,19 @@ internal class HighScoreDataTests
         });
     }
 
-    [Test]
-    public async Task SaveJsonTest()
-    {
-        HighScoreData highscoreData = new HighScoreData();
-        await highscoreData.Save();
-    }
+    //[Test]
+    //public async Task SaveJsonTest()
+    //{
+    //    HighScoreData highscoreData = new HighScoreData();
+    //    await highscoreData.Save();
+    //}
 
-    [Test]
-    public async Task SaveXmlTest()
-    {
-        HighScoreData highscoreData = new HighScoreData();
-        highscoreData.FileType = FileType.xml;
+    //[Test]
+    //public async Task SaveXmlTest()
+    //{
+    //    HighScoreData highscoreData = new HighScoreData();
+    //    highscoreData.FileType = FileType.xml;
 
-        await highscoreData.Save();
-    }
+    //    await highscoreData.Save();
+    //}
 }

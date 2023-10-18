@@ -226,7 +226,7 @@ public class HighScoreData : IHighScoreData
         dto.Players = Players;
         dto.Games = Games;
         dto.HighScores = HighScores;
-        //dto.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes = "________________", Nickname = "TEST", Email = "TEST" });
+        //DEBUG dto.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes = "________________", Nickname = "TEST", Email = "TEST" });
 
 
         using (FileStream fs = new FileStream(FilePath + "data.json", FileMode.Create, FileAccess.Write))
@@ -241,7 +241,7 @@ public class HighScoreData : IHighScoreData
         dto.Players = Players;
         dto.Games = Games;
         dto.HighScores = HighScores;
-        dto.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes = "NEUEUEUEUEUEUEUEUEUE", Nickname = "TEST", Email = "TEST" });
+        //DEBUG dto.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes = "NEUEUEUEUEUEUEUEUEUE", Nickname = "TEST", Email = "TEST" });
         
         XmlSerializer serializer = new XmlSerializer(typeof(DataTransferObject));
         using (var writer = new StreamWriter(FilePath + "data.xml"))
