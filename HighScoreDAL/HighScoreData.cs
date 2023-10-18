@@ -7,6 +7,8 @@ using System.Xml.Serialization;
 using System.Xml.Linq;
 using System.Reflection.PortableExecutable;
 using System.Data.SqlTypes;
+using System.ComponentModel;
+using Newtonsoft.Json.Linq;
 
 namespace HighScoreDAL;
 
@@ -34,12 +36,12 @@ public class HighScoreData : IHighScoreData
         get { return _highScores ??= LoadHighScores(); }
     }
 
-    public int Save()
+    public async Task<int> Save()
     {
         switch (FileType)
         {
             case FileType.json:
-                SaveJson();
+                await SaveJson();
                 break;
             case FileType.xml:
                 SaveXML();
@@ -138,7 +140,7 @@ public class HighScoreData : IHighScoreData
     if (typeof(T) == typeof(Game))
     {
         List<Game> games = new List<Game>();
-        XmlNodeList gameNodes = xmlDoc.SelectNodes("//root/games/game")!;
+        XmlNodeList gameNodes = xmlDoc.SelectNodes("//Games/Game")!;
 
         foreach (XmlNode gameNode in gameNodes)
         {
@@ -149,7 +151,7 @@ public class HighScoreData : IHighScoreData
     else if (typeof(T) == typeof(Player))
     {
         List<Player> players = new List<Player>();
-        XmlNodeList playerNodes = xmlDoc.SelectNodes("//root/players/player")!;
+        XmlNodeList playerNodes = xmlDoc.SelectNodes("//Players/Player")!;
 
         foreach (XmlNode playerNode in playerNodes)
         {
@@ -160,7 +162,7 @@ public class HighScoreData : IHighScoreData
     else if (typeof(T) == typeof(HighScore))
     {
         List<HighScore> highscores = new List<HighScore>();
-        XmlNodeList highscoreNodes = xmlDoc.SelectNodes("//root/highscores/highscore")!;
+        XmlNodeList highscoreNodes = xmlDoc.SelectNodes("//HighScores/HighScore")!;
 
         foreach (XmlNode highscoreNode in highscoreNodes)
         {
@@ -224,6 +226,8 @@ public class HighScoreData : IHighScoreData
         dto.Players = Players;
         dto.Games = Games;
         dto.HighScores = HighScores;
+        //dto.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes = "________________", Nickname = "TEST", Email = "TEST" });
+
 
         using (FileStream fs = new FileStream(FilePath + "data.json", FileMode.Create, FileAccess.Write))
         {
@@ -233,7 +237,17 @@ public class HighScoreData : IHighScoreData
 
     private void SaveXML()
     {
-        throw new NotImplementedException();
+        DataTransferObject dto = new DataTransferObject();
+        dto.Players = Players;
+        dto.Games = Games;
+        dto.HighScores = HighScores;
+        dto.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes = "NEUEUEUEUEUEUEUEUEUE", Nickname = "TEST", Email = "TEST" });
+        
+        XmlSerializer serializer = new XmlSerializer(typeof(DataTransferObject));
+        using (var writer = new StreamWriter(FilePath + "data.xml"))
+        {
+            serializer.Serialize(writer, dto);
+        }
     }
 
     private void SaveCSV()

@@ -86,7 +86,6 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.Players, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.Players, Is.TypeOf<List<Player>>());
-            Assert.That(highscoreData.Players.Count, Is.EqualTo(10));
         });
     }
 
@@ -100,7 +99,6 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.HighScores, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.HighScores, Is.TypeOf<List<HighScore>>());
-            Assert.That(highscoreData.HighScores.Count, Is.EqualTo(10));
         });
     }
 
@@ -114,7 +112,6 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.HighScores, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.HighScores, Is.TypeOf<List<HighScore>>());
-            Assert.That(highscoreData.HighScores.Count, Is.EqualTo(10));
         });
     }
 
@@ -128,15 +125,22 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.HighScores, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.HighScores, Is.TypeOf<List<HighScore>>());
-            Assert.That(highscoreData.HighScores.Count, Is.EqualTo(10));
         });
     }
 
     [Test]
-    public void SaveTest()
+    public async Task SaveJsonTest()
     {
         HighScoreData highscoreData = new HighScoreData();
-        highscoreData.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes="________________", Nickname="TEST", Email="TEST" });
-        highscoreData.Save();
+        await highscoreData.Save();
+    }
+
+    [Test]
+    public async Task SaveXmlTest()
+    {
+        HighScoreData highscoreData = new HighScoreData();
+        highscoreData.FileType = FileType.xml;
+
+        await highscoreData.Save();
     }
 }

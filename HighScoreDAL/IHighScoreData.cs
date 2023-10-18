@@ -19,7 +19,7 @@ namespace HighScoreDAL
         /// Save all Lists to json, csv or xml file
         /// </summary>
         /// <returns>Number of insertions</returns>
-        int Save();
+        Task<int> Save();
     }
 
     public enum FileType
