@@ -224,11 +224,19 @@ public class HighScoreData : IHighScoreData
         dto.Players = Players;
         dto.Games = Games;
         dto.HighScores = HighScores;
-        
-        string json = JsonSerializer.Serialize(dto);
-        using (FileStream fs = new FileStream(FilePath, FileMode.OpenOrCreate, FileAccess.Write))
+
+        Player testPlayer = new Player
         {
-            await JsonSerializer.SerializeAsync(fs, json);
+            Birthday = DateTime.Now,
+            Email = "test",
+            IsActive = false,
+            Notes = "test Notizen"
+        };
+        dto.Players.Add(testPlayer);
+
+        using (FileStream fs = new FileStream(FilePath, FileMode.Create, FileAccess.Write))
+        {
+            await JsonSerializer.SerializeAsync(fs, dto);
         }
     }
 

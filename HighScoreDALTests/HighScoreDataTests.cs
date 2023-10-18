@@ -138,9 +138,11 @@ internal class HighScoreDataTests
     }
 
     [Test]
-    public void SaveJsonTest()
+    public void SaveTest()
     {
         HighScoreData highscoreData = new HighScoreData();
         highscoreData.Save();
+
+        Assert.That(highscoreData.Players.Count, Is.EqualTo(11));
     }
 }
