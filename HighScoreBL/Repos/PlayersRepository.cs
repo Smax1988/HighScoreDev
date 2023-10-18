@@ -1,4 +1,5 @@
-﻿using HighScoreDAL;
+﻿using HighScoreBL.Repos.Interfaces;
+using HighScoreDAL;
 using HighScoreModels;
 using HighScoreModels.ViewModels;
 using System;
@@ -9,22 +10,19 @@ using System.Threading.Tasks;
 
 namespace HighScoreBL.Repos
 {
-    public class PlayersRepo : IPlayersRepo
+    public class PlayersRepository : BaseRepository, IPlayersRepository
     {
-        private readonly HighScoreData dal;
+        
 
-        public PlayersRepo(HighScoreData hsdal)
-        {
-            dal = hsdal;
-        }
+        public PlayersRepository(HighScoreData data) : base (data) {} 
         public Player? GetPlayer(int playerId)
         {
-            return dal.Players.FirstOrDefault(p => p.PlayerId == playerId);
+            return _data.Players.FirstOrDefault(p => p.PlayerId == playerId);
         }
 
         public List<PlayerPerGameViewModel> GetAllPlayers()
         {
-            var players = from p in dal.Players
+            var players = from p in _data.Players
                           orderby p.Nickname
                           select new PlayerPerGameViewModel
                           {

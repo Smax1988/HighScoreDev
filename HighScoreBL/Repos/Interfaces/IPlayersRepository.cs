@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighScoreBL.Repos
+namespace HighScoreBL.Repos.Interfaces
 {
-    public interface IPlayersRepo
+    public interface IPlayersRepository
     {
         Player? GetPlayer(int playerId);
         List<PlayerPerGameViewModel> GetAllPlayers();

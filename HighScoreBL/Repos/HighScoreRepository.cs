@@ -1,6 +1,6 @@
 ﻿using HighScoreBL.Repos.Interfaces;
+using HighScoreDAL;
 using HighScoreModels;
-using HighScoreModels.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace HighScoreBL.Repos
 {
-    public class GameRepository : IGameRepository
+    internal class HighScoreRepository : IHighScoreRepository
     {
-        public List<GameViewModel> GetAllGames()
+        public List<HighScore> GetAllHighscores()
         {
             throw new NotImplementedException();
         }
 
-        public Game? GetGame(int gameId)
+        public HighScore? GetHighscore(int highscoreId)
         {
             throw new NotImplementedException();
         }

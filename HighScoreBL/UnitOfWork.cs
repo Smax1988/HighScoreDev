@@ -10,15 +10,15 @@ namespace HighScoreBL;
 
 public class UnitOfWork
 {
-    private PlayersRepo? playersRepo;
+    private PlayersRepository? playersRepo;
     private readonly HighScoreData dal = new HighScoreData();
 
 
-    public PlayersRepo Players
+    public PlayersRepository Players
     {
         get
         {
-            return playersRepo ??= new PlayersRepo(dal);
+            return playersRepo ??= new PlayersRepository(dal);
         }
     }
 
