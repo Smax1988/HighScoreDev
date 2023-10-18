@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighScoreBL.Repos
-{
-    internal class HighScoreRepository : IHighScoreRepository
-    {
-        public List<HighScore> GetAllHighscores()
-        {
-            throw new NotImplementedException();
-        }
+namespace HighScoreBL.Repos;
 
-        public HighScore? GetHighscore(int highscoreId)
-        {
-            throw new NotImplementedException();
-        }
+public class HighScoreRepository : BaseRepository, IHighScoreRepository
+{
+    public HighScoreRepository(HighScoreData data) : base(data) { }
+    
+    public List<HighScore> GetAllHighscores()
+    {
+        throw new NotImplementedException();
+    }
+
+    public HighScore? GetHighscore(int highscoreId)
+    {
+        throw new NotImplementedException();
     }
 }

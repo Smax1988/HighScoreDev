@@ -136,4 +136,11 @@ internal class HighScoreDataTests
             Assert.That(highscoreData.HighScores.Count, Is.EqualTo(10));
         });
     }
+
+    [Test]
+    public void SaveJsonTest()
+    {
+        HighScoreData highscoreData = new HighScoreData();
+        highscoreData.Save();
+    }
 }
