@@ -9,8 +9,8 @@ namespace HighScoreDAL
 {
     internal class DataTransferObject
     {
-        public List<Game> Games = new List<Game>();
-        public List<Player> Players = new List<Player>();
-        public List<HighScore> HighScores = new List<HighScore>();
+        public List<Game> Games { get; set; } = new List<Game>();
+        public List<Player> Players { get; set; } = new List<Player>();
+        public List<HighScore> HighScores { get; set; } = new List<HighScore>();
     }
 }

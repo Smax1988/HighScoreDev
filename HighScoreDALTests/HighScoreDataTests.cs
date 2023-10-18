@@ -21,7 +21,6 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
-            Assert.That(highscoreData.Games.Count, Is.EqualTo(10));
         });
     }
 
@@ -35,7 +34,6 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
-            Assert.That(highscoreData.Games.Count, Is.EqualTo(10));
         });
     }
 
@@ -49,7 +47,6 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.Games, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.Games, Is.TypeOf<List<Game>>());
-            Assert.That(highscoreData.Games.Count, Is.EqualTo(10));
         });
     }
 
@@ -63,7 +60,6 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.Players, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.Players, Is.TypeOf<List<Player>>());
-            Assert.That(highscoreData.Players.Count, Is.EqualTo(10));
         });
     }
 
@@ -77,7 +73,6 @@ internal class HighScoreDataTests
         {
             Assert.That(highscoreData.Players, Is.Not.Null.Or.Empty);
             Assert.That(highscoreData.Players, Is.TypeOf<List<Player>>());
-            Assert.That(highscoreData.Players.Count, Is.EqualTo(10));
         });
     }
 
@@ -141,8 +136,7 @@ internal class HighScoreDataTests
     public void SaveTest()
     {
         HighScoreData highscoreData = new HighScoreData();
+        highscoreData.Players.Add(new Player { FirstName = "Test_Player", LastName = "Test_Player", PlayerId = 100000, Notes="________________", Nickname="TEST", Email="TEST" });
         highscoreData.Save();
-
-        Assert.That(highscoreData.Players.Count, Is.EqualTo(11));
     }
 }

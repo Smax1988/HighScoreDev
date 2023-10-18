@@ -16,7 +16,7 @@ public class HighScoreData : IHighScoreData
     private List<Player>? _players;
     private List<HighScore>? _highScores;
 
-    public string FilePath { get; set; } = "../../../../HighScoreDAL/HighScore";
+    public string FilePath { get; set; } = "../../../../HighScoreDAL/data/";
     public FileType FileType { get; set; } = FileType.json;
 
     public List<Game> Games
@@ -61,7 +61,7 @@ public class HighScoreData : IHighScoreData
         {
             case FileType.json:
                 JsonDocument data = LoadJson();
-                JsonElement games = data.RootElement[0].GetProperty("games");
+                JsonElement games = data.RootElement.GetProperty("Games");
                 return JsonSerializer.Deserialize<List<Game>>(games.GetRawText()) ?? new List<Game>();
             case FileType.xml:
                 return LoadXml<Game>();
@@ -78,7 +78,7 @@ public class HighScoreData : IHighScoreData
         {
             case FileType.json:
                 JsonDocument jsonData = LoadJson();
-                JsonElement players = jsonData.RootElement[0].GetProperty("players");
+                JsonElement players = jsonData.RootElement.GetProperty("Players");
                 return JsonSerializer.Deserialize<List<Player>>(players.GetRawText()) ?? new List<Player>();
             case FileType.xml:
                 return LoadXml<Player>();
@@ -95,7 +95,7 @@ public class HighScoreData : IHighScoreData
         {
             case FileType.json:
                 JsonDocument data = LoadJson();
-                JsonElement highscores = data.RootElement[0].GetProperty("highscores");
+                JsonElement highscores = data.RootElement.GetProperty("HighScores");
                 return JsonSerializer.Deserialize<List<HighScore>>(highscores.GetRawText()) ?? new List<HighScore>();
             case FileType.xml:
                 return LoadXml<HighScore>();
@@ -109,7 +109,7 @@ public class HighScoreData : IHighScoreData
     private JsonDocument LoadJson()
     {
         string jsonContent;
-        using (var fileStream = new FileStream(FilePath + "\\data.json", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        using (var fileStream = new FileStream(FilePath + "data.json", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
         {
             using (var streamReader = new StreamReader(fileStream))
             {
@@ -127,7 +127,7 @@ public class HighScoreData : IHighScoreData
     private List<T> LoadXml<T>()
 {
     string xmlString;
-    using (var streamReader = new StreamReader(FilePath + "\\data.xml"))
+    using (var streamReader = new StreamReader(FilePath + "data.xml"))
     {
         xmlString = streamReader.ReadToEnd();
     }
@@ -225,16 +225,7 @@ public class HighScoreData : IHighScoreData
         dto.Games = Games;
         dto.HighScores = HighScores;
 
-        Player testPlayer = new Player
-        {
-            Birthday = DateTime.Now,
-            Email = "test",
-            IsActive = false,
-            Notes = "test Notizen"
-        };
-        dto.Players.Add(testPlayer);
-
-        using (FileStream fs = new FileStream(FilePath, FileMode.Create, FileAccess.Write))
+        using (FileStream fs = new FileStream(FilePath + "data.json", FileMode.Create, FileAccess.Write))
         {
             await JsonSerializer.SerializeAsync(fs, dto);
         }
