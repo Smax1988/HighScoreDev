@@ -4,12 +4,12 @@ namespace HighScoreBL.Repos.Interfaces
 {
     public interface IHighScoreRepository
     {
-        HighScore? GetHighscore(int highscoreId);
+        HighScore? GetHighScoreByGameIdByPlayerIdByScore(HighScore highscore);
+        HighScore? GetHighscore(int highscoreId, int gameId);
         List<HighScore> GetAllHighscores();
 
         void Add(HighScore highscore);
         bool Remove(HighScore highscore);
-        bool Remove(int highscroeId);
         void Update(HighScore highscore);
     }
 }
