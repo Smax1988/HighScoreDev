@@ -1,4 +1,5 @@
 ﻿using HighScoreDAL;
+using HighScoreDAL.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ namespace HighScoreBL.Repos
 {
     public class BaseRepository
     {
-        protected readonly HighScoreData _data;
+        protected readonly IHighScoreDataBase _data;
 
-        public BaseRepository(HighScoreData data) { _data = data; }
+        public BaseRepository(IHighScoreDataBase data) { _data = data; }
     }
 }

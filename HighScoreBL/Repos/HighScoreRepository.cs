@@ -1,5 +1,6 @@
 ﻿using HighScoreBL.Repos.Interfaces;
 using HighScoreDAL;
+using HighScoreDAL.Utils;
 using HighScoreModels;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace HighScoreBL.Repos;
 
 public class HighScoreRepository : BaseRepository, IHighScoreRepository
 {
-    public HighScoreRepository(HighScoreData data) : base(data) { }
+    public HighScoreRepository(IHighScoreDataBase data) : base(data) { }
     
     public List<HighScore> GetAllHighscores()
     {

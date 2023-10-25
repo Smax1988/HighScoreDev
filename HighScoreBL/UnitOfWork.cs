@@ -21,10 +21,13 @@ public class UnitOfWork
         switch (fileType)
         {
             case FileType.json:
+                _data = new HighScoreDataJSON();
                 break;
             case FileType.xml:
+                _data = new HighScoreDataXML();
                 break;
             default:
+                _data = new HighScoreDataCSV();
                 break;
         }
     }
@@ -56,7 +59,7 @@ public class UnitOfWork
 
     public async Task<int> Commit()
     {
-        return await _data.Save();
+        return await _data.SaveAsync();
     }
 
     public void Rollback()

@@ -1,5 +1,6 @@
 ﻿using HighScoreBL.Repos.Interfaces;
 using HighScoreDAL;
+using HighScoreDAL.Utils;
 using HighScoreModels;
 using HighScoreModels.ViewModels;
 using System;
@@ -12,7 +13,7 @@ namespace HighScoreBL.Repos;
 
 public class GameRepository : BaseRepository, IGameRepository
 {
-    public GameRepository(HighScoreData data) : base(data) { }
+    public GameRepository(IHighScoreDataBase data) : base(data) { }
 
     public List<GameViewModel> GetAllGames()
     {
