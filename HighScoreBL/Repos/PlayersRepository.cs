@@ -1,5 +1,4 @@
 ﻿using HighScoreBL.Repos.Interfaces;
-using HighScoreDAL;
 using HighScoreDAL.Utils;
 using HighScoreModels;
 using HighScoreModels.ViewModels;
