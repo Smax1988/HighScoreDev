@@ -13,6 +13,7 @@ namespace HighScoreBL.Repos;
 public class GameRepository : BaseRepository, IGameRepository
 {
     public GameRepository(HighScoreData data) : base(data) { }
+
     public List<GameViewModel> GetAllGames()
     {
         throw new NotImplementedException();

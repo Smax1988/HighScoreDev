@@ -11,13 +11,12 @@ namespace HighScoreBL.Repos.Interfaces
     public interface IPlayersRepository
     {
         Player? GetPlayer(int playerId);
-        List<PlayerPerGameViewModel> GetAllPlayers();
+        List<PlayerViewModel> GetAllPlayers();
+        List<PlayerPerGameViewModel> GetAllPlayers(int GameId);
 
-        // Add
-        // Remove
-        // Update
-
-        // List<PlayerPerGame> GetPlayers(int GameId);
-
+        void Add(Player player);
+        bool Remove(Player player);
+        bool Remove(int playerId);
+        void Update(Player player);
     }
 }

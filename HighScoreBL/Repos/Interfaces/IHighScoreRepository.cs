@@ -13,8 +13,5 @@ namespace HighScoreBL.Repos.Interfaces
         HighScore? GetHighscore(int highscoreId);
         List<HighScore> GetAllHighscores();
 
-        // Add
-        // Remove
-        // Update
     }
 }

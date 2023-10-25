@@ -1,5 +1,6 @@
 ﻿using HighScoreBL.Repos;
 using HighScoreDAL;
+using HighScoreDAL.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,24 @@ namespace HighScoreBL;
 
 public class UnitOfWork
 {
-    private readonly HighScoreData _data = new HighScoreData();
+    private readonly IHighScoreDataBase _data;
     private PlayersRepository? _playersRepo;
     private GameRepository? _gameRepo;
     private HighScoreRepository? _highScoreRepo;
+
+    public UnitOfWork(FileType fileType = FileType.json)
+    {
+        switch (fileType)
+        {
+            case FileType.json:
+                break;
+            case FileType.xml:
+                break;
+            default:
+                break;
+        }
+    }
+
 
     public PlayersRepository PlayersRepo
     {

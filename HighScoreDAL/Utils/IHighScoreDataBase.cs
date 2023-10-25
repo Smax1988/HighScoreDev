@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HighScoreDAL
+namespace HighScoreDAL.Utils
 {
-    public interface IHighScoreData
+    public interface IHighScoreDataBase
     {
         public string FilePath { get; set; }
         public FileType FileType { get; set; }
@@ -19,7 +19,8 @@ namespace HighScoreDAL
         /// Save all Lists to json, csv or xml file
         /// </summary>
         /// <returns>Number of insertions</returns>
-        Task<int> Save();
+        Task<int> SaveAsync();
+        void Rollback();
     }
 
     public enum FileType
