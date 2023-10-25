@@ -13,7 +13,8 @@ public interface IGameRepository
     Game? GetGame(int gameId);
     List<GameViewModel> GetAllGames();
 
-    // Add
-    // Remove
-    // Update
+    void Add(Game game);
+    bool Remove(Game game);
+    bool Remove(int gameId);
+    void Update(Game game);
 }

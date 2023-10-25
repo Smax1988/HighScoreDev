@@ -101,6 +101,36 @@
       <Published>2023-10-17T00:00:00</Published>
       <Publisher>Publisher10</Publisher>
     </Game>
+    <Game>
+      <Entry>2023-10-25T14:52:20.1576959+02:00</Entry>
+      <Exit>2023-10-25T14:52:20.1576961+02:00</Exit>
+      <IsActive>true</IsActive>
+      <Notes>Notes1</Notes>
+      <GameId>1</GameId>
+      <Title>Title1</Title>
+      <Published>2023-10-25T14:52:20.1576957+02:00</Published>
+      <Publisher>Publisher1</Publisher>
+    </Game>
+    <Game>
+      <Entry>2023-10-25T15:00:08.1987506+02:00</Entry>
+      <Exit>2023-10-25T15:00:08.1987507+02:00</Exit>
+      <IsActive>true</IsActive>
+      <Notes>Notes1</Notes>
+      <GameId>1000000000</GameId>
+      <Title>Title1</Title>
+      <Published>2023-10-25T15:00:08.1987503+02:00</Published>
+      <Publisher>Publisher1</Publisher>
+    </Game>
+    <Game>
+      <Entry>2023-10-25T15:00:46.3236534+02:00</Entry>
+      <Exit>2023-10-25T15:00:46.3236536+02:00</Exit>
+      <IsActive>true</IsActive>
+      <Notes>Notes1</Notes>
+      <GameId>1000000000</GameId>
+      <Title>Title1</Title>
+      <Published>2023-10-25T15:00:46.3236532+02:00</Published>
+      <Publisher>Publisher1</Publisher>
+    </Game>
   </Games>
   <Players>
     <Player>
@@ -223,6 +253,42 @@
       <FirstName>Mia</FirstName>
       <LastName>Wilson</LastName>
     </Player>
+    <Player>
+      <Entry>2023-10-25T14:52:20.157695+02:00</Entry>
+      <Exit>2023-10-25T14:52:20.1576952+02:00</Exit>
+      <IsActive>true</IsActive>
+      <Notes>Notes1</Notes>
+      <PlayerId>1</PlayerId>
+      <Nickname>Player1</Nickname>
+      <Email>player1@example.com</Email>
+      <Birthday>2023-10-25T14:52:20.1576889+02:00</Birthday>
+      <FirstName>John</FirstName>
+      <LastName>Doe</LastName>
+    </Player>
+    <Player>
+      <Entry>2023-10-25T15:00:08.1987497+02:00</Entry>
+      <Exit>2023-10-25T15:00:08.1987499+02:00</Exit>
+      <IsActive>true</IsActive>
+      <Notes>Notes1</Notes>
+      <PlayerId>1000000000</PlayerId>
+      <Nickname>Player1</Nickname>
+      <Email>player1@example.com</Email>
+      <Birthday>2023-10-25T15:00:08.1987459+02:00</Birthday>
+      <FirstName>John</FirstName>
+      <LastName>Doe</LastName>
+    </Player>
+    <Player>
+      <Entry>2023-10-25T15:00:46.3236525+02:00</Entry>
+      <Exit>2023-10-25T15:00:46.3236527+02:00</Exit>
+      <IsActive>true</IsActive>
+      <Notes>Notes1</Notes>
+      <PlayerId>1000000000</PlayerId>
+      <Nickname>Player1</Nickname>
+      <Email>player1@example.com</Email>
+      <Birthday>2023-10-25T15:00:46.3236459+02:00</Birthday>
+      <FirstName>John</FirstName>
+      <LastName>Doe</LastName>
+    </Player>
   </Players>
   <HighScores>
     <HighScore>
@@ -284,6 +350,24 @@
       <PlayerId>110</PlayerId>
       <Score>130</Score>
       <ScoreDate>2023-10-08T00:00:00</ScoreDate>
+    </HighScore>
+    <HighScore>
+      <GameId>1</GameId>
+      <PlayerId>101</PlayerId>
+      <Score>100</Score>
+      <ScoreDate>2023-10-25T14:52:20.1576968+02:00</ScoreDate>
+    </HighScore>
+    <HighScore>
+      <GameId>1000000000</GameId>
+      <PlayerId>101</PlayerId>
+      <Score>100</Score>
+      <ScoreDate>2023-10-25T15:00:08.1987513+02:00</ScoreDate>
+    </HighScore>
+    <HighScore>
+      <GameId>1000000000</GameId>
+      <PlayerId>101</PlayerId>
+      <Score>100</Score>
+      <ScoreDate>2023-10-25T15:00:46.3236541+02:00</ScoreDate>
     </HighScore>
   </HighScores>
 </DataTransferObject>

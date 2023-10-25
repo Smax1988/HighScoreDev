@@ -1,12 +1,6 @@
 ﻿using HighScoreBL.Repos.Interfaces;
-using HighScoreDAL;
 using HighScoreDAL.Utils;
 using HighScoreModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HighScoreBL.Repos;
 

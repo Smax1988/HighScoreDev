@@ -1,10 +1,4 @@
-﻿using HighScoreModels.ViewModels;
-using HighScoreModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HighScoreModels;
 
 namespace HighScoreBL.Repos.Interfaces
 {
@@ -13,5 +7,9 @@ namespace HighScoreBL.Repos.Interfaces
         HighScore? GetHighscore(int highscoreId);
         List<HighScore> GetAllHighscores();
 
+        void Add(HighScore highscore);
+        bool Remove(HighScore highscore);
+        bool Remove(int highscroeId);
+        void Update(HighScore highscore);
     }
 }

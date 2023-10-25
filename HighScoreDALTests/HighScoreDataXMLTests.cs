@@ -46,7 +46,7 @@ namespace HighScoreDALTests
         {
             Player player = new Player
             {
-                PlayerId = 1,
+                PlayerId = 1000000000,
                 Nickname = "Player1",
                 Email = "player1@example.com",
                 Birthday = DateTime.Now,
@@ -60,7 +60,7 @@ namespace HighScoreDALTests
 
             Game game = new Game
             {
-                GameId = 1,
+                GameId = 1000000000,
                 Title = "Title1",
                 Published = DateTime.Now,
                 Publisher = "Publisher1",
@@ -72,7 +72,7 @@ namespace HighScoreDALTests
 
             HighScore highscore = new HighScore
             {
-                GameId =  1,
+                GameId =  1000000000,
                 PlayerId = 101,
                 Score =  100,
                 ScoreDate =  DateTime.Now
