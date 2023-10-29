@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace HighScoreDAL;
 
+/// <summary>
+/// Provides saving and loading data to the file database in csv format.
+/// </summary>
 public class HighScoreDataCSV : HighScoreDataBase
 {
     public override async Task<int> SaveAsync()
     {
-        return (_games is null ? 0 : _games.Count) +
-               (_players is null ? 0 : _players.Count) +
-               (_highScores is null ? 0 : _highScores.Count);
+        throw new NotImplementedException();
     }
 
     protected override List<Game> LoadGames()

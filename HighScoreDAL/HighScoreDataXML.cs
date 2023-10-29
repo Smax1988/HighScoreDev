@@ -5,8 +5,15 @@ using System.Xml.Serialization;
 
 namespace HighScoreDAL;
 
+/// <summary>
+/// Provides saving and loading data to the file database in xml format.
+/// </summary>
 public class HighScoreDataXML : HighScoreDataBase
 {
+    /// <summary>
+    /// Async method to save all data to the file database in xml format.
+    /// </summary>
+    /// <returns>Number of entries saved.</returns>
     public override async Task<int> SaveAsync()
     {
         DataTransferObject dto = new DataTransferObject();
@@ -25,21 +32,37 @@ public class HighScoreDataXML : HighScoreDataBase
                (_highScores is null ? 0 : _highScores.Count);
     }
 
+    /// <summary>
+    /// Loads all data for games from xml file database
+    /// </summary>
+    /// <returns>All game data.</returns>
     protected override List<Game> LoadGames()
     {
         return LoadXml<Game>();
     }
 
+    /// <summary>
+    /// Loads all data for highscore from xml file database.
+    /// </summary>
+    /// <returns>All highscore data.</returns>
     protected override List<HighScore> LoadHighScores()
     {
         return LoadXml<HighScore>();
     }
 
+    /// <summary>
+    /// Loads all data for players from xml file database.
+    /// </summary>
+    /// <returns>All player data.</returns>
     protected override List<Player> LoadPlayers()
     {
         return LoadXml<Player>();
     }
 
+    /// <summary>
+    /// Loads all data from xml file database.
+    /// </summary>
+    /// <returns>All data as xml string.</returns>
     private List<T> LoadXml<T>()
     {
         string xmlString;
@@ -90,6 +113,11 @@ public class HighScoreDataXML : HighScoreDataBase
         }
     }
 
+    /// <summary>
+    /// Parses the values from xml to HighScore object and adds it to List<HighScore>
+    /// </summary>
+    /// <param name="highscores">Where parsed information is stored.</param>
+    /// <param name="highscoreNode">xml entry that will be parsed.</param>
     private static void ParseHighscores(List<HighScore> highscores, XmlNode highscoreNode)
     {
         HighScore highscore = new HighScore();
@@ -101,6 +129,11 @@ public class HighScoreDataXML : HighScoreDataBase
         highscores.Add(highscore);
     }
 
+    /// <summary>
+    /// Parses the values from xml to Player object and adds it to List<Player>
+    /// </summary>
+    /// <param name="players">Where parsed information is stored.</param>
+    /// <param name="playerNode">xml entry that will be parsed.</param>
     private static void ParsePlayers(List<Player> players, XmlNode playerNode)
     {
         Player player = new Player();
@@ -118,6 +151,12 @@ public class HighScoreDataXML : HighScoreDataBase
         players.Add(player);
     }
 
+
+    /// <summary>
+    /// Parses the values from xml to Game object and adds it to List<Game>
+    /// </summary>
+    /// <param name="games">Where parsed information is stored.</param>
+    /// <param name="gameNode">xml entry that will be parsed</param>
     private static void ParseGames(List<Game> games, XmlNode gameNode)
     {
         Game game = new Game();

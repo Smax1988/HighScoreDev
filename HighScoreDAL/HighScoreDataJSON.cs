@@ -4,8 +4,15 @@ using System.Text.Json;
 
 namespace HighScoreDAL;
 
+/// <summary>
+/// Provides saving and loading data to the file database in json format.
+/// </summary>
 public class HighScoreDataJSON : HighScoreDataBase
 {
+    /// <summary>
+    /// Async method to save all data to the file database in json format.
+    /// </summary>
+    /// <returns>Number of entries saved.</returns>
     public override async Task<int> SaveAsync()
     {
         DataTransferObject dto = new DataTransferObject();
@@ -23,6 +30,10 @@ public class HighScoreDataJSON : HighScoreDataBase
                (_highScores is null ? 0 : _highScores.Count);
     }
 
+    /// <summary>
+    /// Loads all data for games from json file database
+    /// </summary>
+    /// <returns>All game data.</returns>
     protected override List<Game> LoadGames()
     {
         JsonDocument data = LoadJson();
@@ -30,6 +41,10 @@ public class HighScoreDataJSON : HighScoreDataBase
         return JsonSerializer.Deserialize<List<Game>>(games.GetRawText()) ?? new List<Game>();
     }
 
+    /// <summary>
+    /// Loads all data for highscore from json file database.
+    /// </summary>
+    /// <returns>All highscore data.</returns>
     protected override List<HighScore> LoadHighScores()
     {
         JsonDocument data = LoadJson();
@@ -37,6 +52,10 @@ public class HighScoreDataJSON : HighScoreDataBase
         return JsonSerializer.Deserialize<List<HighScore>>(highscores.GetRawText()) ?? new List<HighScore>();
     }
 
+    /// <summary>
+    /// Loads all data for players from json file database.
+    /// </summary>
+    /// <returns>All player data.</returns>
     protected override List<Player> LoadPlayers()
     {
         JsonDocument jsonData = LoadJson();
@@ -44,6 +63,10 @@ public class HighScoreDataJSON : HighScoreDataBase
         return JsonSerializer.Deserialize<List<Player>>(players.GetRawText()) ?? new List<Player>();
     }
 
+    /// <summary>
+    /// Loads all data from json file database.
+    /// </summary>
+    /// <returns>All data as json string.</returns>
     private JsonDocument LoadJson()
     {
         string jsonContent;
