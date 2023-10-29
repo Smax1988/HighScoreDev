@@ -1,0 +1,186 @@
+\hypertarget{class_players_repository}{}\doxysection{Players\+Repository Class Reference}
+\label{class_players_repository}\index{PlayersRepository@{PlayersRepository}}
+
+
+This repository includes C\+R\+UD operations (Create, Read, Update, Delete) on the file database for a player.  
+
+
+Inheritance diagram for Players\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_players_repository}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_players_repository_aab5e391a725d9336ed00f188412b8974}{Players\+Repository}} (\mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base}{I\+High\+Score\+Data\+Base}} data)
+\item 
+\mbox{\hyperlink{class_player}{Player}}? \mbox{\hyperlink{class_players_repository_a64fa09908802e2da098cda525487a863}{Get\+Player}} (int player\+Id)
+\begin{DoxyCompactList}\small\item\em Get a player by player\+Id from player database. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_player_view_model}{Player\+View\+Model}} $>$ \mbox{\hyperlink{class_players_repository_a9b0c617f471fbd652a232d4862ed361b}{Get\+All\+Players}} ()
+\begin{DoxyCompactList}\small\item\em Gets all player from player database. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_player_per_game_view_model}{Player\+Per\+Game\+View\+Model}} $>$ \mbox{\hyperlink{class_players_repository_ac59a8d0387aebada0cf39ef20727ea4d}{Get\+All\+Players}} (int game\+Id)
+\item 
+void \mbox{\hyperlink{class_players_repository_a5f9b5d4cbd97d85816061d23f6ff3a82}{Add}} (\mbox{\hyperlink{class_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Adds a player to the player database and creates a unique player\+Id. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_players_repository_a614e1f534b10a82d799c56d181d3522e}{Remove}} (\mbox{\hyperlink{class_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Deletes a player from the player database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_players_repository_a0172276a9ead95b4d13ce6daea8edf28}{Remove}} (int player\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes a player with a certain player\+Id from the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_players_repository_a902b80fcb7ec0e7c16f9ad0c3eb1b7bc}{Update}} (\mbox{\hyperlink{class_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Updates a given player in the player database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This repository includes C\+R\+UD operations (Create, Read, Update, Delete) on the file database for a player. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_players_repository_aab5e391a725d9336ed00f188412b8974}\label{class_players_repository_aab5e391a725d9336ed00f188412b8974}} 
+\index{PlayersRepository@{PlayersRepository}!PlayersRepository@{PlayersRepository}}
+\index{PlayersRepository@{PlayersRepository}!PlayersRepository@{PlayersRepository}}
+\doxysubsubsection{\texorpdfstring{PlayersRepository()}{PlayersRepository()}}
+{\footnotesize\ttfamily Players\+Repository.\+Players\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base}{I\+High\+Score\+Data\+Base}}}]{data }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_players_repository_a5f9b5d4cbd97d85816061d23f6ff3a82}\label{class_players_repository_a5f9b5d4cbd97d85816061d23f6ff3a82}} 
+\index{PlayersRepository@{PlayersRepository}!Add@{Add}}
+\index{Add@{Add}!PlayersRepository@{PlayersRepository}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Players\+Repository.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Adds a player to the player database and creates a unique player\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \mbox{\hyperlink{class_player}{Player}} to be added\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_players_repository_afa4c18bd4202643b03249861bdc85476}{I\+Players\+Repository}}.
+
+\mbox{\Hypertarget{class_players_repository_a9b0c617f471fbd652a232d4862ed361b}\label{class_players_repository_a9b0c617f471fbd652a232d4862ed361b}} 
+\index{PlayersRepository@{PlayersRepository}!GetAllPlayers@{GetAllPlayers}}
+\index{GetAllPlayers@{GetAllPlayers}!PlayersRepository@{PlayersRepository}}
+\doxysubsubsection{\texorpdfstring{GetAllPlayers()}{GetAllPlayers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_player_view_model}{Player\+View\+Model}}$>$ Players\+Repository.\+Get\+All\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets all player from player database. 
+
+\begin{DoxyReturn}{Returns}
+All players with their Player\+Id, Email and Nickname wrapped in a \mbox{\hyperlink{class_player_view_model}{Player\+View\+Model}}
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_players_repository_ab24d694af5be0fe341f0b7539b9a2660}{I\+Players\+Repository}}.
+
+\mbox{\Hypertarget{class_players_repository_ac59a8d0387aebada0cf39ef20727ea4d}\label{class_players_repository_ac59a8d0387aebada0cf39ef20727ea4d}} 
+\index{PlayersRepository@{PlayersRepository}!GetAllPlayers@{GetAllPlayers}}
+\index{GetAllPlayers@{GetAllPlayers}!PlayersRepository@{PlayersRepository}}
+\doxysubsubsection{\texorpdfstring{GetAllPlayers()}{GetAllPlayers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_player_per_game_view_model}{Player\+Per\+Game\+View\+Model}}$>$ Players\+Repository.\+Get\+All\+Players (\begin{DoxyParamCaption}\item[{int}]{game\+Id }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_i_players_repository_a79702e3fbafc1706fcf1a4fc1df1c59d}{I\+Players\+Repository}}.
+
+\mbox{\Hypertarget{class_players_repository_a64fa09908802e2da098cda525487a863}\label{class_players_repository_a64fa09908802e2da098cda525487a863}} 
+\index{PlayersRepository@{PlayersRepository}!GetPlayer@{GetPlayer}}
+\index{GetPlayer@{GetPlayer}!PlayersRepository@{PlayersRepository}}
+\doxysubsubsection{\texorpdfstring{GetPlayer()}{GetPlayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}}? Players\+Repository.\+Get\+Player (\begin{DoxyParamCaption}\item[{int}]{player\+Id }\end{DoxyParamCaption})}
+
+
+
+Get a player by player\+Id from player database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Id} & The Id of the player\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The found player or null if no player with given player\+Id is found
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_players_repository_a9dd0455809cdc6c10b8aa6ab4a30efcc}{I\+Players\+Repository}}.
+
+\mbox{\Hypertarget{class_players_repository_a0172276a9ead95b4d13ce6daea8edf28}\label{class_players_repository_a0172276a9ead95b4d13ce6daea8edf28}} 
+\index{PlayersRepository@{PlayersRepository}!Remove@{Remove}}
+\index{Remove@{Remove}!PlayersRepository@{PlayersRepository}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Players\+Repository.\+Remove (\begin{DoxyParamCaption}\item[{int}]{player\+Id }\end{DoxyParamCaption})}
+
+
+
+Deletes a player with a certain player\+Id from the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Id} & The player\+Id of the player to be deleted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if player was successfully removed, false otherwise. Also returns false if player was not found.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_players_repository_ae631a516b8ccd9026360bccdc27946c8}{I\+Players\+Repository}}.
+
+\mbox{\Hypertarget{class_players_repository_a614e1f534b10a82d799c56d181d3522e}\label{class_players_repository_a614e1f534b10a82d799c56d181d3522e}} 
+\index{PlayersRepository@{PlayersRepository}!Remove@{Remove}}
+\index{Remove@{Remove}!PlayersRepository@{PlayersRepository}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Players\+Repository.\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Deletes a player from the player database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \mbox{\hyperlink{class_player}{Player}} to be deleted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if player was successfully removed, false otherwise. Also returns false if player was not found.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_players_repository_adcfdde38f5c1626c24c508d1aca2a801}{I\+Players\+Repository}}.
+
+\mbox{\Hypertarget{class_players_repository_a902b80fcb7ec0e7c16f9ad0c3eb1b7bc}\label{class_players_repository_a902b80fcb7ec0e7c16f9ad0c3eb1b7bc}} 
+\index{PlayersRepository@{PlayersRepository}!Update@{Update}}
+\index{Update@{Update}!PlayersRepository@{PlayersRepository}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Players\+Repository.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Updates a given player in the player database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player to be updated\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_players_repository_a887443daabf5637b4b18749f10d6dc74}{I\+Players\+Repository}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projects/\+High\+Score\+Dev/\+High\+Score\+B\+L/\+Repos/\mbox{\hyperlink{_players_repository_8cs}{Players\+Repository.\+cs}}\end{DoxyCompactItemize}

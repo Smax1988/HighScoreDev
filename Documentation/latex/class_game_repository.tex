@@ -1,0 +1,174 @@
+\hypertarget{class_game_repository}{}\doxysection{Game\+Repository Class Reference}
+\label{class_game_repository}\index{GameRepository@{GameRepository}}
+
+
+This repository includes C\+R\+UD operations (Create, Read, Update, Delete) on the file database for a game.  
+
+
+Inheritance diagram for Game\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_repository}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_repository_a881546cd50714c82f2b0fcdaa458acf6}{Game\+Repository}} (\mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base}{I\+High\+Score\+Data\+Base}} data)
+\item 
+\mbox{\hyperlink{class_game}{Game}}? \mbox{\hyperlink{class_game_repository_acb94859a77e32c24e79311d7bd3bbb6b}{Get\+Game}} (int game\+Id)
+\begin{DoxyCompactList}\small\item\em Get a game by game\+Id from games database. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_game_view_model}{Game\+View\+Model}} $>$ \mbox{\hyperlink{class_game_repository_a63724437e1ffe07e380b2a9490ca72b3}{Get\+All\+Games}} ()
+\begin{DoxyCompactList}\small\item\em Gets all games from games database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_repository_a8f1c8147dc483be889a259971836c361}{Add}} (\mbox{\hyperlink{class_game}{Game}} game)
+\begin{DoxyCompactList}\small\item\em Adds a game to the game database and creates a unique game\+Id. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_repository_ac011f9177917d131af8e99abfc9e63a5}{Remove}} (\mbox{\hyperlink{class_game}{Game}} game)
+\begin{DoxyCompactList}\small\item\em Deletes a game from the game database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_repository_a7e73f92fa1aa4b19c4810ae9384220bb}{Remove}} (int game\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes a game with a certain game\+Id from game database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_repository_a9bb5387dd0e8216e8c5d517a6304a9cb}{Update}} (\mbox{\hyperlink{class_game}{Game}} game)
+\begin{DoxyCompactList}\small\item\em Updates a given game in the game database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This repository includes C\+R\+UD operations (Create, Read, Update, Delete) on the file database for a game. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_repository_a881546cd50714c82f2b0fcdaa458acf6}\label{class_game_repository_a881546cd50714c82f2b0fcdaa458acf6}} 
+\index{GameRepository@{GameRepository}!GameRepository@{GameRepository}}
+\index{GameRepository@{GameRepository}!GameRepository@{GameRepository}}
+\doxysubsubsection{\texorpdfstring{GameRepository()}{GameRepository()}}
+{\footnotesize\ttfamily Game\+Repository.\+Game\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base}{I\+High\+Score\+Data\+Base}}}]{data }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_repository_a8f1c8147dc483be889a259971836c361}\label{class_game_repository_a8f1c8147dc483be889a259971836c361}} 
+\index{GameRepository@{GameRepository}!Add@{Add}}
+\index{Add@{Add}!GameRepository@{GameRepository}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Game\+Repository.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}}}]{game }\end{DoxyParamCaption})}
+
+
+
+Adds a game to the game database and creates a unique game\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & \mbox{\hyperlink{class_game}{Game}} to be added\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_game_repository_acebfef8e4fcd8995adf41122df767b69}{I\+Game\+Repository}}.
+
+\mbox{\Hypertarget{class_game_repository_a63724437e1ffe07e380b2a9490ca72b3}\label{class_game_repository_a63724437e1ffe07e380b2a9490ca72b3}} 
+\index{GameRepository@{GameRepository}!GetAllGames@{GetAllGames}}
+\index{GetAllGames@{GetAllGames}!GameRepository@{GameRepository}}
+\doxysubsubsection{\texorpdfstring{GetAllGames()}{GetAllGames()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_game_view_model}{Game\+View\+Model}}$>$ Game\+Repository.\+Get\+All\+Games (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets all games from games database. 
+
+\begin{DoxyReturn}{Returns}
+All games with their Game\+Id and title wrapped in \mbox{\hyperlink{class_game_view_model}{Game\+View\+Model}}
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_game_repository_a73371655547a22990002eac1aff22073}{I\+Game\+Repository}}.
+
+\mbox{\Hypertarget{class_game_repository_acb94859a77e32c24e79311d7bd3bbb6b}\label{class_game_repository_acb94859a77e32c24e79311d7bd3bbb6b}} 
+\index{GameRepository@{GameRepository}!GetGame@{GetGame}}
+\index{GetGame@{GetGame}!GameRepository@{GameRepository}}
+\doxysubsubsection{\texorpdfstring{GetGame()}{GetGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game}{Game}}? Game\+Repository.\+Get\+Game (\begin{DoxyParamCaption}\item[{int}]{game\+Id }\end{DoxyParamCaption})}
+
+
+
+Get a game by game\+Id from games database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Id} & The Id of the game\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The found game or null if no game with given game\+Id is found
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_game_repository_a82c50ed2f507931a597babc253738c97}{I\+Game\+Repository}}.
+
+\mbox{\Hypertarget{class_game_repository_ac011f9177917d131af8e99abfc9e63a5}\label{class_game_repository_ac011f9177917d131af8e99abfc9e63a5}} 
+\index{GameRepository@{GameRepository}!Remove@{Remove}}
+\index{Remove@{Remove}!GameRepository@{GameRepository}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Game\+Repository.\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}}}]{game }\end{DoxyParamCaption})}
+
+
+
+Deletes a game from the game database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & The game to be deleted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if game was successfully removed, false otherwise. Also returns false if game was not found.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_game_repository_affd9062414d1c59bf5833a14ae96ec5d}{I\+Game\+Repository}}.
+
+\mbox{\Hypertarget{class_game_repository_a7e73f92fa1aa4b19c4810ae9384220bb}\label{class_game_repository_a7e73f92fa1aa4b19c4810ae9384220bb}} 
+\index{GameRepository@{GameRepository}!Remove@{Remove}}
+\index{Remove@{Remove}!GameRepository@{GameRepository}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Game\+Repository.\+Remove (\begin{DoxyParamCaption}\item[{int}]{game\+Id }\end{DoxyParamCaption})}
+
+
+
+Deletes a game with a certain game\+Id from game database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Id} & The game\+Id of the game to be deleted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if game was successfully removed, false otherwise. Also returns false if game was not found.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_game_repository_aa56405898e290acc84e3b0378ebb49c7}{I\+Game\+Repository}}.
+
+\mbox{\Hypertarget{class_game_repository_a9bb5387dd0e8216e8c5d517a6304a9cb}\label{class_game_repository_a9bb5387dd0e8216e8c5d517a6304a9cb}} 
+\index{GameRepository@{GameRepository}!Update@{Update}}
+\index{Update@{Update}!GameRepository@{GameRepository}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Game\+Repository.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}}}]{game }\end{DoxyParamCaption})}
+
+
+
+Updates a given game in the game database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & The game to be updated.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_game_repository_aaedc752957ec4eb5bedc841a39af66ec}{I\+Game\+Repository}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projects/\+High\+Score\+Dev/\+High\+Score\+B\+L/\+Repos/\mbox{\hyperlink{_game_repository_8cs}{Game\+Repository.\+cs}}\end{DoxyCompactItemize}

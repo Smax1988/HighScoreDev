@@ -1,0 +1,130 @@
+\hypertarget{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base}{}\doxysection{High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base Interface Reference}
+\label{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base}\index{HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}}
+
+
+Interface for the data access layer.  
+
+
+Inheritance diagram for High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.213439cm]{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ int $>$ \mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a91ec8ff5b16e0ed5351d92fd5b420d78}{Save\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Async method to save all data to the file database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_ae0cb7351f92f691c8c3f5102967dd071}{Rollback}} ()
+\begin{DoxyCompactList}\small\item\em Discards changes by loading all data again. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a937560a36cbcae11a251838fb4595fc2}{File\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em File path to the file database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_high_score_d_a_l_1_1_utils_a6d7933bb49f2a983bd7c8b2583c1c5af}{File\+Type}} \mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a3039ab3037bb244c3587f37205e70dbc}{File\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em File type of the file database. Can be J\+S\+ON, X\+ML or C\+SV. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_game}{Game}} $>$ \mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a05dbf2aa4740285e3a8d299b2f15da86}{Games}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Location where data for games from database is stored. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_player}{Player}} $>$ \mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a9fd0c50d55c890757e11b5f5cf9dc3dd}{Players}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Location where data for players from database is stored. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_high_score}{High\+Score}} $>$ \mbox{\hyperlink{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_ab1584b391fc125b39ad814c9c83b21f9}{High\+Scores}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Location where data for highscores from database is stored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for the data access layer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_ae0cb7351f92f691c8c3f5102967dd071}\label{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_ae0cb7351f92f691c8c3f5102967dd071}} 
+\index{HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}!Rollback@{Rollback}}
+\index{Rollback@{Rollback}!HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}}
+\doxysubsubsection{\texorpdfstring{Rollback()}{Rollback()}}
+{\footnotesize\ttfamily void High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base.\+Rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Discards changes by loading all data again. 
+
+
+
+Implemented in \mbox{\hyperlink{class_high_score_data_base_a1ef8d038eb361a270c43e611ce0aa9d5}{High\+Score\+Data\+Base}}.
+
+\mbox{\Hypertarget{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a91ec8ff5b16e0ed5351d92fd5b420d78}\label{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a91ec8ff5b16e0ed5351d92fd5b420d78}} 
+\index{HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}!SaveAsync@{SaveAsync}}
+\index{SaveAsync@{SaveAsync}!HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}}
+\doxysubsubsection{\texorpdfstring{SaveAsync()}{SaveAsync()}}
+{\footnotesize\ttfamily Task$<$int$>$ High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base.\+Save\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Async method to save all data to the file database. 
+
+\begin{DoxyReturn}{Returns}
+Number of entries saved.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_high_score_data_base_ac4e9731c1247d3a3bc6741ff899ccbcf}{High\+Score\+Data\+Base}}, \mbox{\hyperlink{class_high_score_data_x_m_l_acb7f2e2eb4290b3ba7cfe3d0d0c4cda0}{High\+Score\+Data\+X\+ML}}, \mbox{\hyperlink{class_high_score_data_j_s_o_n_a0f87eec7217e0abce923a4c49a7401c4}{High\+Score\+Data\+J\+S\+ON}}, and \mbox{\hyperlink{class_high_score_data_c_s_v_a96db90174b11fd0fa493679ab1d22a12}{High\+Score\+Data\+C\+SV}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a937560a36cbcae11a251838fb4595fc2}\label{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a937560a36cbcae11a251838fb4595fc2}} 
+\index{HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}!FilePath@{FilePath}}
+\index{FilePath@{FilePath}!HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}}
+\doxysubsubsection{\texorpdfstring{FilePath}{FilePath}}
+{\footnotesize\ttfamily string High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base.\+File\+Path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+File path to the file database. 
+
+\mbox{\Hypertarget{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a3039ab3037bb244c3587f37205e70dbc}\label{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a3039ab3037bb244c3587f37205e70dbc}} 
+\index{HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}!FileType@{FileType}}
+\index{FileType@{FileType}!HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}}
+\doxysubsubsection{\texorpdfstring{FileType}{FileType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_high_score_d_a_l_1_1_utils_a6d7933bb49f2a983bd7c8b2583c1c5af}{File\+Type}} High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base.\+File\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+File type of the file database. Can be J\+S\+ON, X\+ML or C\+SV. 
+
+\mbox{\Hypertarget{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a05dbf2aa4740285e3a8d299b2f15da86}\label{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a05dbf2aa4740285e3a8d299b2f15da86}} 
+\index{HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}!Games@{Games}}
+\index{Games@{Games}!HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}}
+\doxysubsubsection{\texorpdfstring{Games}{Games}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_game}{Game}}$>$ High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base.\+Games\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Location where data for games from database is stored. 
+
+\mbox{\Hypertarget{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_ab1584b391fc125b39ad814c9c83b21f9}\label{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_ab1584b391fc125b39ad814c9c83b21f9}} 
+\index{HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}!HighScores@{HighScores}}
+\index{HighScores@{HighScores}!HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}}
+\doxysubsubsection{\texorpdfstring{HighScores}{HighScores}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_high_score}{High\+Score}}$>$ High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base.\+High\+Scores\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Location where data for highscores from database is stored. 
+
+\mbox{\Hypertarget{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a9fd0c50d55c890757e11b5f5cf9dc3dd}\label{interface_high_score_d_a_l_1_1_utils_1_1_i_high_score_data_base_a9fd0c50d55c890757e11b5f5cf9dc3dd}} 
+\index{HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}!Players@{Players}}
+\index{Players@{Players}!HighScoreDAL.Utils.IHighScoreDataBase@{HighScoreDAL.Utils.IHighScoreDataBase}}
+\doxysubsubsection{\texorpdfstring{Players}{Players}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_player}{Player}}$>$ High\+Score\+D\+A\+L.\+Utils.\+I\+High\+Score\+Data\+Base.\+Players\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Location where data for players from database is stored. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projects/\+High\+Score\+Dev/\+High\+Score\+D\+A\+L/\+Utils/\mbox{\hyperlink{_i_high_score_data_base_8cs}{I\+High\+Score\+Data\+Base.\+cs}}\end{DoxyCompactItemize}

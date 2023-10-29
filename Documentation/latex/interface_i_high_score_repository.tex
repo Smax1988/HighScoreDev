@@ -1,0 +1,89 @@
+\hypertarget{interface_i_high_score_repository}{}\doxysection{I\+High\+Score\+Repository Interface Reference}
+\label{interface_i_high_score_repository}\index{IHighScoreRepository@{IHighScoreRepository}}
+
+
+Interface for the \mbox{\hyperlink{class_high_score_repository}{High\+Score\+Repository}}  
+
+
+Inheritance diagram for I\+High\+Score\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_i_high_score_repository}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_high_score}{High\+Score}}? \mbox{\hyperlink{interface_i_high_score_repository_a84e79903aecf8130b73cfbc996dca0ec}{Get\+High\+Score\+By\+Game\+Id\+By\+Player\+Id\+By\+Score}} (\mbox{\hyperlink{class_high_score}{High\+Score}} highscore)
+\item 
+\mbox{\hyperlink{class_high_score}{High\+Score}}? \mbox{\hyperlink{interface_i_high_score_repository_ad5796e9e8d295d52c6c12764968dc5c0}{Get\+Highscore}} (int highscore\+Id, int game\+Id)
+\item 
+List$<$ \mbox{\hyperlink{class_high_score}{High\+Score}} $>$ \mbox{\hyperlink{interface_i_high_score_repository_a18fe1f09c5f0240b9ac371bab79f16ff}{Get\+All\+Highscores}} ()
+\item 
+void \mbox{\hyperlink{interface_i_high_score_repository_a7422981e5f39a52ab8c2e45145f7098e}{Add}} (\mbox{\hyperlink{class_high_score}{High\+Score}} highscore)
+\item 
+bool \mbox{\hyperlink{interface_i_high_score_repository_afde7f2fabcda2c2170e754b4a874e2fe}{Remove}} (\mbox{\hyperlink{class_high_score}{High\+Score}} highscore)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for the \mbox{\hyperlink{class_high_score_repository}{High\+Score\+Repository}} 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_i_high_score_repository_a7422981e5f39a52ab8c2e45145f7098e}\label{interface_i_high_score_repository_a7422981e5f39a52ab8c2e45145f7098e}} 
+\index{IHighScoreRepository@{IHighScoreRepository}!Add@{Add}}
+\index{Add@{Add}!IHighScoreRepository@{IHighScoreRepository}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void I\+High\+Score\+Repository.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_high_score}{High\+Score}}}]{highscore }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_high_score_repository_a47b339c2aee26637e8aa26d5269294f0}{High\+Score\+Repository}}.
+
+\mbox{\Hypertarget{interface_i_high_score_repository_a18fe1f09c5f0240b9ac371bab79f16ff}\label{interface_i_high_score_repository_a18fe1f09c5f0240b9ac371bab79f16ff}} 
+\index{IHighScoreRepository@{IHighScoreRepository}!GetAllHighscores@{GetAllHighscores}}
+\index{GetAllHighscores@{GetAllHighscores}!IHighScoreRepository@{IHighScoreRepository}}
+\doxysubsubsection{\texorpdfstring{GetAllHighscores()}{GetAllHighscores()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_high_score}{High\+Score}}$>$ I\+High\+Score\+Repository.\+Get\+All\+Highscores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_high_score_repository_aa0e5c9d98559eb62a4ae37f166134431}{High\+Score\+Repository}}.
+
+\mbox{\Hypertarget{interface_i_high_score_repository_ad5796e9e8d295d52c6c12764968dc5c0}\label{interface_i_high_score_repository_ad5796e9e8d295d52c6c12764968dc5c0}} 
+\index{IHighScoreRepository@{IHighScoreRepository}!GetHighscore@{GetHighscore}}
+\index{GetHighscore@{GetHighscore}!IHighScoreRepository@{IHighScoreRepository}}
+\doxysubsubsection{\texorpdfstring{GetHighscore()}{GetHighscore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_high_score}{High\+Score}}? I\+High\+Score\+Repository.\+Get\+Highscore (\begin{DoxyParamCaption}\item[{int}]{highscore\+Id,  }\item[{int}]{game\+Id }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_high_score_repository_a6b896f15bd71ec2789169c3fae8973c4}{High\+Score\+Repository}}.
+
+\mbox{\Hypertarget{interface_i_high_score_repository_a84e79903aecf8130b73cfbc996dca0ec}\label{interface_i_high_score_repository_a84e79903aecf8130b73cfbc996dca0ec}} 
+\index{IHighScoreRepository@{IHighScoreRepository}!GetHighScoreByGameIdByPlayerIdByScore@{GetHighScoreByGameIdByPlayerIdByScore}}
+\index{GetHighScoreByGameIdByPlayerIdByScore@{GetHighScoreByGameIdByPlayerIdByScore}!IHighScoreRepository@{IHighScoreRepository}}
+\doxysubsubsection{\texorpdfstring{GetHighScoreByGameIdByPlayerIdByScore()}{GetHighScoreByGameIdByPlayerIdByScore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_high_score}{High\+Score}}? I\+High\+Score\+Repository.\+Get\+High\+Score\+By\+Game\+Id\+By\+Player\+Id\+By\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_high_score}{High\+Score}}}]{highscore }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_high_score_repository_a29ddf532e9b4e8d2b14a4afd93bd090f}{High\+Score\+Repository}}.
+
+\mbox{\Hypertarget{interface_i_high_score_repository_afde7f2fabcda2c2170e754b4a874e2fe}\label{interface_i_high_score_repository_afde7f2fabcda2c2170e754b4a874e2fe}} 
+\index{IHighScoreRepository@{IHighScoreRepository}!Remove@{Remove}}
+\index{Remove@{Remove}!IHighScoreRepository@{IHighScoreRepository}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily bool I\+High\+Score\+Repository.\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_high_score}{High\+Score}}}]{highscore }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_high_score_repository_adb16e887b45dcf0c0e1276051114e132}{High\+Score\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projects/\+High\+Score\+Dev/\+High\+Score\+B\+L/\+Repos/\+Interfaces/\mbox{\hyperlink{_i_high_score_repository_8cs}{I\+High\+Score\+Repository.\+cs}}\end{DoxyCompactItemize}

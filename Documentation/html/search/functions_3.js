@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['gamerepository_165',['GameRepository',['../class_game_repository.html#a881546cd50714c82f2b0fcdaa458acf6',1,'GameRepository']]],
+  ['getallgames_166',['GetAllGames',['../class_game_repository.html#a63724437e1ffe07e380b2a9490ca72b3',1,'GameRepository.GetAllGames()'],['../interface_i_game_repository.html#a73371655547a22990002eac1aff22073',1,'IGameRepository.GetAllGames()']]],
+  ['getallhighscores_167',['GetAllHighscores',['../class_high_score_repository.html#aa0e5c9d98559eb62a4ae37f166134431',1,'HighScoreRepository.GetAllHighscores()'],['../interface_i_high_score_repository.html#a18fe1f09c5f0240b9ac371bab79f16ff',1,'IHighScoreRepository.GetAllHighscores()']]],
+  ['getallplayers_168',['GetAllPlayers',['../interface_i_players_repository.html#ab24d694af5be0fe341f0b7539b9a2660',1,'IPlayersRepository.GetAllPlayers()'],['../interface_i_players_repository.html#a79702e3fbafc1706fcf1a4fc1df1c59d',1,'IPlayersRepository.GetAllPlayers(int GameId)'],['../class_players_repository.html#a9b0c617f471fbd652a232d4862ed361b',1,'PlayersRepository.GetAllPlayers()'],['../class_players_repository.html#ac59a8d0387aebada0cf39ef20727ea4d',1,'PlayersRepository.GetAllPlayers(int gameId)']]],
+  ['getgame_169',['GetGame',['../class_game_repository.html#acb94859a77e32c24e79311d7bd3bbb6b',1,'GameRepository.GetGame()'],['../interface_i_game_repository.html#a82c50ed2f507931a597babc253738c97',1,'IGameRepository.GetGame()']]],
+  ['gethighscore_170',['GetHighscore',['../class_high_score_repository.html#a6b896f15bd71ec2789169c3fae8973c4',1,'HighScoreRepository.GetHighscore()'],['../interface_i_high_score_repository.html#ad5796e9e8d295d52c6c12764968dc5c0',1,'IHighScoreRepository.GetHighscore()']]],
+  ['gethighscorebygameidbyplayeridbyscore_171',['GetHighScoreByGameIdByPlayerIdByScore',['../class_high_score_repository.html#a29ddf532e9b4e8d2b14a4afd93bd090f',1,'HighScoreRepository.GetHighScoreByGameIdByPlayerIdByScore()'],['../interface_i_high_score_repository.html#a84e79903aecf8130b73cfbc996dca0ec',1,'IHighScoreRepository.GetHighScoreByGameIdByPlayerIdByScore()']]],
+  ['getplayer_172',['GetPlayer',['../interface_i_players_repository.html#a9dd0455809cdc6c10b8aa6ab4a30efcc',1,'IPlayersRepository.GetPlayer()'],['../class_players_repository.html#a64fa09908802e2da098cda525487a863',1,'PlayersRepository.GetPlayer()']]]
+];
