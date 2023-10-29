@@ -1,10 +1,5 @@
 ﻿using HighScoreDAL.Utils;
 using HighScoreModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HighScoreDAL;
 
@@ -17,20 +12,9 @@ public abstract class HighScoreDataBase : IHighScoreDataBase
     public string FilePath { get; set; } = "../../../../HighScoreDAL/data/";
     public FileType FileType { get; set; } = FileType.json;
 
-    public List<Game> Games
-    {
-        get { return _games ??= LoadGames(); }
-    }
-
-    public List<Player> Players 
-    {
-        get { return _players ??= LoadPlayers(); }
-    }
-
-    public List<HighScore> HighScores
-    {
-        get { return _highScores ??= LoadHighScores(); }
-    }
+    public List<Game> Games { get => _games ??= LoadGames(); }
+    public List<Player> Players { get => _players ??= LoadPlayers(); }
+    public List<HighScore> HighScores { get => _highScores ??= LoadHighScores(); }
 
     public void Rollback()
     {

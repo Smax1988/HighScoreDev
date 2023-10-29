@@ -29,29 +29,11 @@ public class UnitOfWork
         }
     }
 
-    public PlayersRepository PlayersRepo
-    {
-        get
-        {
-            return _playersRepo ??= new PlayersRepository(_data);
-        }
-    }
+    public PlayersRepository PlayersRepo { get => _playersRepo ??= new PlayersRepository(_data); }
 
-    public GameRepository GamesRepo
-    {
-        get 
-        {
-            return _gameRepo ??= new GameRepository(_data); 
-        }
-    }
+    public GameRepository GamesRepo { get => _gameRepo ??= new GameRepository(_data); }
 
-    public HighScoreRepository HighScoresRepo
-    {
-        get
-        {
-            return _highScoreRepo ??= new HighScoreRepository(_data);
-        }
-    }
+    public HighScoreRepository HighScoresRepo { get => _highScoreRepo ??= new HighScoreRepository(_data); }
 
     public async Task<int> Commit()
     {
@@ -60,6 +42,6 @@ public class UnitOfWork
 
     public void Rollback()
     {
-        throw new NotImplementedException();
+        _data.Rollback();
     }
 }
