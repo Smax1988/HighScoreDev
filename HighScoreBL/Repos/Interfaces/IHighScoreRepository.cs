@@ -1,14 +1,16 @@
 ﻿using HighScoreModels;
 
-namespace HighScoreBL.Repos.Interfaces
-{
-    public interface IHighScoreRepository
-    {
-        HighScore? GetHighScoreByGameIdByPlayerIdByScore(HighScore highscore);
-        HighScore? GetHighscore(int highscoreId, int gameId);
-        List<HighScore> GetAllHighscores();
+namespace HighScoreBL.Repos.Interfaces;
 
-        void Add(HighScore highscore);
-        bool Remove(HighScore highscore);
-    }
+/// <summary>
+/// Interface for the HighScoreRepository
+/// </summary>
+public interface IHighScoreRepository
+{
+    HighScore? GetHighScoreByGameIdByPlayerIdByScore(HighScore highscore);
+    HighScore? GetHighscore(int highscoreId, int gameId);
+    List<HighScore> GetAllHighscores();
+
+    void Add(HighScore highscore);
+    bool Remove(HighScore highscore);
 }

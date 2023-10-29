@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace HighScoreBL.Repos.Interfaces;
 
+/// <summary>
+/// Interface for the GameRepository
+/// </summary>
 public interface IGameRepository
 {
     Game? GetGame(int gameId);

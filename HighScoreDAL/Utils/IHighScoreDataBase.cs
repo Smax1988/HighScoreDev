@@ -2,6 +2,9 @@
 
 namespace HighScoreDAL.Utils
 {
+    /// <summary>
+    /// Interface for the data access layer.
+    /// </summary>
     public interface IHighScoreDataBase
     {
         /// <summary>
