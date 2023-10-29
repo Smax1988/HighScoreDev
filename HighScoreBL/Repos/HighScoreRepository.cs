@@ -1,7 +1,6 @@
 ﻿using HighScoreBL.Repos.Interfaces;
 using HighScoreDAL.Utils;
 using HighScoreModels;
-using System.Numerics;
 
 namespace HighScoreBL.Repos;
 
@@ -12,8 +11,8 @@ public class HighScoreRepository : BaseRepository, IHighScoreRepository
     public HighScore? GetHighScoreByGameIdByPlayerIdByScore(HighScore highscore)
     {
         return _data.HighScores.FirstOrDefault(h => h.GameId == highscore.GameId
-                                                                 && h.PlayerId == highscore.PlayerId
-                                                                 && h.Score == highscore.Score);
+                                                 && h.PlayerId == highscore.PlayerId
+                                                 && h.Score == highscore.Score);
     }
 
     public HighScore? GetHighscore(int playerId, int gameId)
@@ -43,19 +42,12 @@ public class HighScoreRepository : BaseRepository, IHighScoreRepository
         }
         else
         {
-            //if (sameScoreAndPlayer.Score == highscore.Score)
-            //    highscore.
-
+            sameScoreAndPlayer.ScoreDate = DateTime.Now;
         }
     }
 
     public bool Remove(HighScore highscore)
     {
         return _data.HighScores.Remove(highscore);
-    }
-
-    public void Update(HighScore highscore)
-    {
-        
     }
 }

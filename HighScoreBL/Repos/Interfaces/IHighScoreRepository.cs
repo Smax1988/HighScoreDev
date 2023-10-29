@@ -10,6 +10,5 @@ namespace HighScoreBL.Repos.Interfaces
 
         void Add(HighScore highscore);
         bool Remove(HighScore highscore);
-        void Update(HighScore highscore);
     }
 }
