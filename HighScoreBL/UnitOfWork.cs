@@ -21,12 +21,13 @@ public class UnitOfWork
             case FileType.xml:
                 _data = new HighScoreDataXML();
                 break;
-            default:
+            case FileType.csv:
                 _data = new HighScoreDataCSV();
                 break;
+            default:
+                throw new ArgumentOutOfRangeException("FileType not supported. Choose Json, XML or CSV");
         }
     }
-
 
     public PlayersRepository PlayersRepo
     {
