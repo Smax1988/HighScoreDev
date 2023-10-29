@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HighScoreModels;
 
+/// <summary>
+/// Additional data for certain models.
+/// </summary>
 public class Details
 {
     public DateTime Entry { get; set; }

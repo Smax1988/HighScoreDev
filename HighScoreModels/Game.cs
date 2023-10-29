@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace HighScoreModels
+namespace HighScoreModels;
+
+/// <summary>
+/// This model represents the data of a game.
+/// </summary>
+public class Game : Details
 {
-    public class Game : Details
-    {
-        public int GameId { get; set; }
-        public string Title { get; set; } = string.Empty;
-        public DateTime Published { get; set; }
-        public string Publisher { get; set; } = string.Empty;
-    }
+    public int GameId { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public DateTime Published { get; set; }
+    public string Publisher { get; set; } = string.Empty;
 }

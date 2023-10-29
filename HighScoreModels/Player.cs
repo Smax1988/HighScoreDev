@@ -7,6 +7,9 @@ using System.Xml.Serialization;
 
 namespace HighScoreModels;
 
+/// <summary>
+/// This model represents all data for a player.
+/// </summary>
 public class Player : Details
 {
     public int PlayerId { get; set; }
