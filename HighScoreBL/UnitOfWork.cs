@@ -30,9 +30,7 @@ public class UnitOfWork
     }
 
     public PlayersRepository PlayersRepo { get => _playersRepo ??= new PlayersRepository(_data); }
-
     public GameRepository GamesRepo { get => _gameRepo ??= new GameRepository(_data); }
-
     public HighScoreRepository HighScoresRepo { get => _highScoreRepo ??= new HighScoreRepository(_data); }
 
     public async Task<int> Commit()
