@@ -4,10 +4,18 @@ using HighScoreModels;
 
 namespace HighScoreBL.Repos;
 
+/// <summary>
+/// This repository includes CRUD operations (Create, Read, Update, Delete) on the file database for a highscore.
+/// </summary>
 public class HighScoreRepository : BaseRepository, IHighScoreRepository
 {
     public HighScoreRepository(IHighScoreDataBase data) : base(data) { }
 
+    /// <summary>
+    /// Gets a highscore by gameId, playerId and score.
+    /// </summary>
+    /// <param name="highscore">The highscore to be found</param>
+    /// <returns>The found highscore or null if no highscore with given parameters was found</returns>
     public HighScore? GetHighScoreByGameIdByPlayerIdByScore(HighScore highscore)
     {
         return _data.HighScores.FirstOrDefault(h => h.GameId == highscore.GameId
@@ -15,11 +23,21 @@ public class HighScoreRepository : BaseRepository, IHighScoreRepository
                                                  && h.Score == highscore.Score);
     }
 
+    /// <summary>
+    /// Gets a highscore by playerId and gameId.
+    /// </summary>
+    /// <param name="playerId">The highscore's playerId</param>
+    /// <param name="gameId">The highscore's gameId</param>
+    /// <returns>The found highscore or null if no highscore with the given parameters was found.</returns>
     public HighScore? GetHighscore(int playerId, int gameId)
     {
         return _data.HighScores.FirstOrDefault(h => h.PlayerId == playerId && h.GameId == gameId);
     }
 
+    /// <summary>
+    /// Gets all highscores from the highscore database.
+    /// </summary>
+    /// <returns>All highscores.</returns>
     public List<HighScore> GetAllHighscores()
     {
         var highscores = from h in _data.HighScores
@@ -33,6 +51,11 @@ public class HighScoreRepository : BaseRepository, IHighScoreRepository
         return highscores.ToList();
     }
 
+    /// <summary>
+    /// Adds a highscore to the highscore database.
+    /// If a highscore for playerId and gameId exists already, the score date will be updated.
+    /// </summary>
+    /// <param name="highscore">The highscore to be added.</param>
     public void Add(HighScore highscore)
     {
         var sameScoreAndPlayer = GetHighScoreByGameIdByPlayerIdByScore(highscore);
@@ -46,6 +69,11 @@ public class HighScoreRepository : BaseRepository, IHighScoreRepository
         }
     }
 
+    /// <summary>
+    /// Deletes a highscore from highscore database.
+    /// </summary>
+    /// <param name="highscore">The highscore to be deleted.</param>
+    /// <returns>True if highscore was successfully removed, false otherwise. Also returns false if highscore was not found.</returns>
     public bool Remove(HighScore highscore)
     {
         return _data.HighScores.Remove(highscore);
