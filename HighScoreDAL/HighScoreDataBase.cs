@@ -22,7 +22,6 @@ public abstract class HighScoreDataBase : IHighScoreDataBase
 
     public List<Player> Players { get => _players ??= LoadPlayers(); }
 
-
     public List<HighScore> HighScores { get => _highScores ??= LoadHighScores(); }
 
     public void Rollback()
@@ -32,6 +31,10 @@ public abstract class HighScoreDataBase : IHighScoreDataBase
         _players = null;
     }
 
+    /// <summary>
+    /// Saves all data for Games, Players and Highscores to a file.
+    /// </summary>
+    /// <returns></returns>
     public abstract Task<int> SaveAsync();
 
     /// <summary>
