@@ -77,15 +77,18 @@
             // 
             // textBox1
             // 
-            textBox1.Location=new Point(1174, 12);
+            textBox1.Location=new Point(1275, 12);
             textBox1.Multiline=true;
             textBox1.Name="textBox1";
-            textBox1.Size=new Size(189, 348);
+            textBox1.Size=new Size(189, 488);
             textBox1.TabIndex=4;
             // 
             // dtgPlayers
             // 
             dtgPlayers.AutoGenerateColumns=false;
+            dtgPlayers.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
+            dtgPlayers.BackgroundColor=SystemColors.Control;
+            dtgPlayers.BorderStyle=BorderStyle.None;
             dtgPlayers.ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgPlayers.Columns.AddRange(new DataGridViewColumn[] { playerIdDataGridViewTextBoxColumn, nicknameDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn });
             dtgPlayers.DataSource=playerViewModelBindingSource;
@@ -93,7 +96,7 @@
             dtgPlayers.Name="dtgPlayers";
             dtgPlayers.RowHeadersWidth=51;
             dtgPlayers.RowTemplate.Height=29;
-            dtgPlayers.Size=new Size(575, 188);
+            dtgPlayers.Size=new Size(575, 268);
             dtgPlayers.TabIndex=5;
             // 
             // playerIdDataGridViewTextBoxColumn
@@ -102,7 +105,6 @@
             playerIdDataGridViewTextBoxColumn.HeaderText="PlayerId";
             playerIdDataGridViewTextBoxColumn.MinimumWidth=6;
             playerIdDataGridViewTextBoxColumn.Name="playerIdDataGridViewTextBoxColumn";
-            playerIdDataGridViewTextBoxColumn.Width=125;
             // 
             // nicknameDataGridViewTextBoxColumn
             // 
@@ -110,7 +112,6 @@
             nicknameDataGridViewTextBoxColumn.HeaderText="Nickname";
             nicknameDataGridViewTextBoxColumn.MinimumWidth=6;
             nicknameDataGridViewTextBoxColumn.Name="nicknameDataGridViewTextBoxColumn";
-            nicknameDataGridViewTextBoxColumn.Width=125;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -118,7 +119,6 @@
             emailDataGridViewTextBoxColumn.HeaderText="Email";
             emailDataGridViewTextBoxColumn.MinimumWidth=6;
             emailDataGridViewTextBoxColumn.Name="emailDataGridViewTextBoxColumn";
-            emailDataGridViewTextBoxColumn.Width=125;
             // 
             // playerViewModelBindingSource
             // 
@@ -127,14 +127,17 @@
             // dtgGames
             // 
             dtgGames.AutoGenerateColumns=false;
+            dtgGames.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
+            dtgGames.BackgroundColor=SystemColors.Control;
+            dtgGames.BorderStyle=BorderStyle.None;
             dtgGames.ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgGames.Columns.AddRange(new DataGridViewColumn[] { gameIdDataGridViewTextBoxColumn, titleDataGridViewTextBoxColumn });
             dtgGames.DataSource=gameViewModelBindingSource;
-            dtgGames.Location=new Point(593, 12);
+            dtgGames.Location=new Point(648, 12);
             dtgGames.Name="dtgGames";
             dtgGames.RowHeadersWidth=51;
             dtgGames.RowTemplate.Height=29;
-            dtgGames.Size=new Size(575, 188);
+            dtgGames.Size=new Size(575, 268);
             dtgGames.TabIndex=6;
             // 
             // gameIdDataGridViewTextBoxColumn
@@ -143,7 +146,6 @@
             gameIdDataGridViewTextBoxColumn.HeaderText="GameId";
             gameIdDataGridViewTextBoxColumn.MinimumWidth=6;
             gameIdDataGridViewTextBoxColumn.Name="gameIdDataGridViewTextBoxColumn";
-            gameIdDataGridViewTextBoxColumn.Width=125;
             // 
             // titleDataGridViewTextBoxColumn
             // 
@@ -151,7 +153,6 @@
             titleDataGridViewTextBoxColumn.HeaderText="Title";
             titleDataGridViewTextBoxColumn.MinimumWidth=6;
             titleDataGridViewTextBoxColumn.Name="titleDataGridViewTextBoxColumn";
-            titleDataGridViewTextBoxColumn.Width=125;
             // 
             // gameViewModelBindingSource
             // 
@@ -160,14 +161,17 @@
             // dtgHighscoresPlayer
             // 
             dtgHighscoresPlayer.AutoGenerateColumns=false;
+            dtgHighscoresPlayer.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
+            dtgHighscoresPlayer.BackgroundColor=SystemColors.Control;
+            dtgHighscoresPlayer.BorderStyle=BorderStyle.None;
             dtgHighscoresPlayer.ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgHighscoresPlayer.Columns.AddRange(new DataGridViewColumn[] { gameIdDataGridViewTextBoxColumn1, playerIdDataGridViewTextBoxColumn1, scoreDataGridViewTextBoxColumn, scoreDateDataGridViewTextBoxColumn });
             dtgHighscoresPlayer.DataSource=highScoreBindingSource;
-            dtgHighscoresPlayer.Location=new Point(12, 254);
+            dtgHighscoresPlayer.Location=new Point(12, 366);
             dtgHighscoresPlayer.Name="dtgHighscoresPlayer";
             dtgHighscoresPlayer.RowHeadersWidth=51;
             dtgHighscoresPlayer.RowTemplate.Height=29;
-            dtgHighscoresPlayer.Size=new Size(575, 154);
+            dtgHighscoresPlayer.Size=new Size(575, 243);
             dtgHighscoresPlayer.TabIndex=7;
             // 
             // gameIdDataGridViewTextBoxColumn1
@@ -176,7 +180,6 @@
             gameIdDataGridViewTextBoxColumn1.HeaderText="GameId";
             gameIdDataGridViewTextBoxColumn1.MinimumWidth=6;
             gameIdDataGridViewTextBoxColumn1.Name="gameIdDataGridViewTextBoxColumn1";
-            gameIdDataGridViewTextBoxColumn1.Width=125;
             // 
             // playerIdDataGridViewTextBoxColumn1
             // 
@@ -184,7 +187,6 @@
             playerIdDataGridViewTextBoxColumn1.HeaderText="PlayerId";
             playerIdDataGridViewTextBoxColumn1.MinimumWidth=6;
             playerIdDataGridViewTextBoxColumn1.Name="playerIdDataGridViewTextBoxColumn1";
-            playerIdDataGridViewTextBoxColumn1.Width=125;
             // 
             // scoreDataGridViewTextBoxColumn
             // 
@@ -192,7 +194,6 @@
             scoreDataGridViewTextBoxColumn.HeaderText="Score";
             scoreDataGridViewTextBoxColumn.MinimumWidth=6;
             scoreDataGridViewTextBoxColumn.Name="scoreDataGridViewTextBoxColumn";
-            scoreDataGridViewTextBoxColumn.Width=125;
             // 
             // scoreDateDataGridViewTextBoxColumn
             // 
@@ -200,7 +201,6 @@
             scoreDateDataGridViewTextBoxColumn.HeaderText="ScoreDate";
             scoreDateDataGridViewTextBoxColumn.MinimumWidth=6;
             scoreDateDataGridViewTextBoxColumn.Name="scoreDateDataGridViewTextBoxColumn";
-            scoreDateDataGridViewTextBoxColumn.Width=125;
             // 
             // highScoreBindingSource
             // 
@@ -209,14 +209,17 @@
             // dtgHighscoresGame
             // 
             dtgHighscoresGame.AutoGenerateColumns=false;
+            dtgHighscoresGame.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
+            dtgHighscoresGame.BackgroundColor=SystemColors.Control;
+            dtgHighscoresGame.BorderStyle=BorderStyle.None;
             dtgHighscoresGame.ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgHighscoresGame.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
             dtgHighscoresGame.DataSource=highScoreBindingSource1;
-            dtgHighscoresGame.Location=new Point(593, 254);
+            dtgHighscoresGame.Location=new Point(648, 366);
             dtgHighscoresGame.Name="dtgHighscoresGame";
             dtgHighscoresGame.RowHeadersWidth=51;
             dtgHighscoresGame.RowTemplate.Height=29;
-            dtgHighscoresGame.Size=new Size(575, 154);
+            dtgHighscoresGame.Size=new Size(575, 243);
             dtgHighscoresGame.TabIndex=8;
             // 
             // dataGridViewTextBoxColumn1
@@ -225,7 +228,6 @@
             dataGridViewTextBoxColumn1.HeaderText="GameId";
             dataGridViewTextBoxColumn1.MinimumWidth=6;
             dataGridViewTextBoxColumn1.Name="dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width=125;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -233,7 +235,6 @@
             dataGridViewTextBoxColumn2.HeaderText="PlayerId";
             dataGridViewTextBoxColumn2.MinimumWidth=6;
             dataGridViewTextBoxColumn2.Name="dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width=125;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -241,7 +242,6 @@
             dataGridViewTextBoxColumn3.HeaderText="Score";
             dataGridViewTextBoxColumn3.MinimumWidth=6;
             dataGridViewTextBoxColumn3.Name="dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width=125;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -249,7 +249,6 @@
             dataGridViewTextBoxColumn4.HeaderText="ScoreDate";
             dataGridViewTextBoxColumn4.MinimumWidth=6;
             dataGridViewTextBoxColumn4.Name="dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width=125;
             // 
             // highScoreBindingSource1
             // 
@@ -257,7 +256,7 @@
             // 
             // btnDetailsPlayer
             // 
-            btnDetailsPlayer.Location=new Point(12, 206);
+            btnDetailsPlayer.Location=new Point(12, 286);
             btnDetailsPlayer.Name="btnDetailsPlayer";
             btnDetailsPlayer.Size=new Size(94, 29);
             btnDetailsPlayer.TabIndex=9;
@@ -266,7 +265,7 @@
             // 
             // btnAddPlayer
             // 
-            btnAddPlayer.Location=new Point(393, 206);
+            btnAddPlayer.Location=new Point(373, 286);
             btnAddPlayer.Name="btnAddPlayer";
             btnAddPlayer.Size=new Size(94, 29);
             btnAddPlayer.TabIndex=10;
@@ -275,7 +274,7 @@
             // 
             // btnDeletePlayer
             // 
-            btnDeletePlayer.Location=new Point(493, 206);
+            btnDeletePlayer.Location=new Point(473, 286);
             btnDeletePlayer.Name="btnDeletePlayer";
             btnDeletePlayer.Size=new Size(94, 29);
             btnDeletePlayer.TabIndex=11;
@@ -284,7 +283,7 @@
             // 
             // btnDeleteGame
             // 
-            btnDeleteGame.Location=new Point(1074, 206);
+            btnDeleteGame.Location=new Point(1109, 286);
             btnDeleteGame.Name="btnDeleteGame";
             btnDeleteGame.Size=new Size(94, 29);
             btnDeleteGame.TabIndex=14;
@@ -293,7 +292,7 @@
             // 
             // btnAddGame
             // 
-            btnAddGame.Location=new Point(974, 206);
+            btnAddGame.Location=new Point(1009, 286);
             btnAddGame.Name="btnAddGame";
             btnAddGame.Size=new Size(94, 29);
             btnAddGame.TabIndex=13;
@@ -302,7 +301,7 @@
             // 
             // btnDetailsGame
             // 
-            btnDetailsGame.Location=new Point(593, 206);
+            btnDetailsGame.Location=new Point(648, 286);
             btnDetailsGame.Name="btnDetailsGame";
             btnDetailsGame.Size=new Size(94, 29);
             btnDetailsGame.TabIndex=12;
@@ -311,7 +310,7 @@
             // 
             // btnDeleteHighscorePlayer
             // 
-            btnDeleteHighscorePlayer.Location=new Point(493, 414);
+            btnDeleteHighscorePlayer.Location=new Point(493, 615);
             btnDeleteHighscorePlayer.Name="btnDeleteHighscorePlayer";
             btnDeleteHighscorePlayer.Size=new Size(94, 29);
             btnDeleteHighscorePlayer.TabIndex=17;
@@ -320,7 +319,7 @@
             // 
             // btnAddHighscorePlayer
             // 
-            btnAddHighscorePlayer.Location=new Point(393, 414);
+            btnAddHighscorePlayer.Location=new Point(393, 615);
             btnAddHighscorePlayer.Name="btnAddHighscorePlayer";
             btnAddHighscorePlayer.Size=new Size(94, 29);
             btnAddHighscorePlayer.TabIndex=16;
@@ -329,7 +328,7 @@
             // 
             // btnDetailsHighscorePlayer
             // 
-            btnDetailsHighscorePlayer.Location=new Point(12, 414);
+            btnDetailsHighscorePlayer.Location=new Point(12, 615);
             btnDetailsHighscorePlayer.Name="btnDetailsHighscorePlayer";
             btnDetailsHighscorePlayer.Size=new Size(94, 29);
             btnDetailsHighscorePlayer.TabIndex=15;
@@ -338,7 +337,7 @@
             // 
             // btnDeleteHighscoreGame
             // 
-            btnDeleteHighscoreGame.Location=new Point(1074, 414);
+            btnDeleteHighscoreGame.Location=new Point(1129, 615);
             btnDeleteHighscoreGame.Name="btnDeleteHighscoreGame";
             btnDeleteHighscoreGame.Size=new Size(94, 29);
             btnDeleteHighscoreGame.TabIndex=20;
@@ -347,7 +346,7 @@
             // 
             // btnAddHighscoreGame
             // 
-            btnAddHighscoreGame.Location=new Point(974, 414);
+            btnAddHighscoreGame.Location=new Point(1029, 615);
             btnAddHighscoreGame.Name="btnAddHighscoreGame";
             btnAddHighscoreGame.Size=new Size(94, 29);
             btnAddHighscoreGame.TabIndex=19;
@@ -356,7 +355,7 @@
             // 
             // btnDetailsHighscoreGame
             // 
-            btnDetailsHighscoreGame.Location=new Point(593, 414);
+            btnDetailsHighscoreGame.Location=new Point(648, 615);
             btnDetailsHighscoreGame.Name="btnDetailsHighscoreGame";
             btnDetailsHighscoreGame.Size=new Size(94, 29);
             btnDetailsHighscoreGame.TabIndex=18;
@@ -365,18 +364,18 @@
             // 
             // btnRollback
             // 
-            btnRollback.Location=new Point(1174, 366);
+            btnRollback.Location=new Point(1275, 506);
             btnRollback.Name="btnRollback";
-            btnRollback.Size=new Size(185, 42);
+            btnRollback.Size=new Size(185, 66);
             btnRollback.TabIndex=21;
             btnRollback.Text="Rollback";
             btnRollback.UseVisualStyleBackColor=true;
             // 
             // btnSave
             // 
-            btnSave.Location=new Point(1174, 414);
+            btnSave.Location=new Point(1275, 578);
             btnSave.Name="btnSave";
-            btnSave.Size=new Size(189, 42);
+            btnSave.Size=new Size(189, 66);
             btnSave.TabIndex=22;
             btnSave.Text="Save";
             btnSave.UseVisualStyleBackColor=true;
@@ -385,7 +384,7 @@
             // 
             AutoScaleDimensions=new SizeF(8F, 20F);
             AutoScaleMode=AutoScaleMode.Font;
-            ClientSize=new Size(1371, 458);
+            ClientSize=new Size(1476, 656);
             Controls.Add(btnSave);
             Controls.Add(btnRollback);
             Controls.Add(btnDeleteHighscoreGame);
