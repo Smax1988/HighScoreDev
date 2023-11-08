@@ -12,6 +12,26 @@ public class HighScoreRepository : BaseRepository, IHighScoreRepository
     public HighScoreRepository(IHighScoreDataBase data) : base(data) { }
 
     /// <summary>
+    /// Gets all highscroes for a certain player.
+    /// </summary>
+    /// <param name="playerId">id of player for which highscroes should be fetched.</param>
+    /// <returns></returns>
+    public List<HighScore?> GetAllHighScoreByPlayerId(int playerId)
+    {
+        return _data.HighScores.Where(h => h.PlayerId == playerId).ToList();
+    }
+
+    /// <summary>
+    /// Gets all highscores for a certain game.
+    /// </summary>
+    /// <param name="gameId">id of game for which hichscores should be fetched.</param>
+    /// <returns></returns>
+    public List<HighScore?> GetAllHighScoreByGameId(int gameId)
+    {
+        return _data.HighScores.Where(h => h.GameId == gameId).ToList();
+    }
+
+    /// <summary>
     /// Gets a highscore by gameId, playerId and score.
     /// </summary>
     /// <param name="highscore">The highscore to be found</param>
@@ -78,4 +98,5 @@ public class HighScoreRepository : BaseRepository, IHighScoreRepository
     {
         return _data.HighScores.Remove(highscore);
     }
+
 }
