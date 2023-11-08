@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScoreDAL", "HighScoreDA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScoreBL", "HighScoreBL\HighScoreBL.csproj", "{30587599-DDEB-4B6A-BB5C-1CFF9CDBCE71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreDALTests", "HighScoreDALTests\HighScoreDALTests.csproj", "{DE3F5A71-C2F5-4B2E-8C6F-AB54808F33DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighScoreDALTests", "HighScoreDALTests\HighScoreDALTests.csproj", "{DE3F5A71-C2F5-4B2E-8C6F-AB54808F33DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighScoreGUI", "HighScoreGUI\HighScoreGUI.csproj", "{3D797452-BA66-4259-9AD7-90E1785091C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DE3F5A71-C2F5-4B2E-8C6F-AB54808F33DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE3F5A71-C2F5-4B2E-8C6F-AB54808F33DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE3F5A71-C2F5-4B2E-8C6F-AB54808F33DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D797452-BA66-4259-9AD7-90E1785091C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D797452-BA66-4259-9AD7-90E1785091C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D797452-BA66-4259-9AD7-90E1785091C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D797452-BA66-4259-9AD7-90E1785091C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
